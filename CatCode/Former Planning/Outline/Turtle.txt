@@ -1,0 +1,1 @@
+Premise: Each key performs a different function, such as pen up, pen down, change colour (with Letter-Colour assignments detailed in Colour (Abstract)), go to coords and move a certain amount (with Letter-Number assignments detailed in Number).

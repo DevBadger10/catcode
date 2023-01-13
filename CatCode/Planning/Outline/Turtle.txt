@@ -1,0 +1,5 @@
+Premise: Each character performs a different function. Available functions are: 
+- Pen up 
+- Pen down
+- Change colour (Using Colour (Abstract) bindings)
+- Go to coords (Using Number bindings) 

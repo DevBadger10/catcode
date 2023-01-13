@@ -1,0 +1,1 @@
+Going through, each letter changes a certain aspect of the game. For example, at the start, it is how the player works and moves and stuff. Then, enemys are defined on how they work. Any remaining values that  are unspecified will be treated as their default values.

@@ -1,0 +1,1 @@
+Premise: Each character performs an operation on a number that starts at 0.

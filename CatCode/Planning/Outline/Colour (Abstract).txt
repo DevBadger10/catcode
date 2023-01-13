@@ -1,0 +1,1 @@
+Premise: Each character defines a colour. If there are multiple characters, advance through setting the colour outputted to the values in between the current and next character.

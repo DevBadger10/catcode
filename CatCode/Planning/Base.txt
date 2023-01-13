@@ -1,0 +1,9 @@
+There are 4 different "Catecs", each doing a seperate task.
+They take in letters and numbers (numerical symbols (symbols gained via shift+number (all non-numerical symbols are sent to g, including the spacebar)) and upper-case letters are sent down) and then iterate through them, using each character as either something to set up settings (Game & Colour (Abstract)), or to actively iterate through a process (Number & Turtle). 
+
+The Outline describes the basics of what each Catec does, and Bindings is the individual keys and what they do. 
+Each Catec uses a "Centrifuge" ruling method for bindings, meaning that the more devestating operations (e.g. a multiplication in Numbers) are for characters further out on the keyboard.
+
+There is an abstract Catec. It being "Abstract" means it is mainly used by other Catecs to define things, kind of like Number, but it can't be exported. However, it can be Tested via the Command Line.
+
+The Command Line is a .py file that you run with flags (like --flag and stuff) in order to get a result. More information on Command Line are available in Bindings.

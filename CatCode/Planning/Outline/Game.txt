@@ -1,0 +1,121 @@
+Premise: The type of game is defined by the first character. There are 2 possible options:
+1. Snake
+2. Pong
+The next character defines the Speed, then colours (either two or five) via Colour (Abstract), then the others are discarded, as PyGame is unknown territory to me, and while the original plan was to make this with Godot, Python seemed better, but not for this. But hey! A single keyboard step gives you a game now. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Former (Changed as it is bieng made in Python, not Godot, and I dont know how I'd make this without Godot):
+Premise: Each character affects a setting. The first settings are for the player:
+- Colour
+- Shape
+- Speed
+- Health
+- Regen Speed
+- Dealable Damage
+- Win Condition
+Then all future ones are for other helpers / enemys:
+- Colour
+- Shape
+- Speed
+- Health
+- Regen Speed
+- Dealable Damage
+- Friendship State
+Any values not included in the code default to "g".

@@ -1,0 +1,4 @@
+Pong: 6
+Snake: 12
+
+Therefore Snake is twice more complex than Pong.

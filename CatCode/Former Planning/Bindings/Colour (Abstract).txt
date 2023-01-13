@@ -1,0 +1,20 @@
+Note: This is an Abstract binding, meaning it is a library for other Catecs to use.
+
+~
+!
+@
+#
+$
+%
+
+&
+*
+(
+)
+_
++
+}
+|
+?
+>
+<

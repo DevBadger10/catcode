@@ -1,0 +1,1 @@
+Premise: Each key changes the number, such as Q being +10, and * being x100.
