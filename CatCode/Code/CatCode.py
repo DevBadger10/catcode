@@ -12,6 +12,7 @@ def main():
         print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
         # raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
     if mode == False:
+        print(l_colour([32, 13, 28], [25, 155, 255]))
         print(colour("Fhytrg"))
     if mode == True:
         print()
@@ -368,7 +369,8 @@ def colour(input):
     return("\n\rFinal Answer (RGB Value): " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
 
 def l_colour(initial, goal): # Lerp Colour
-    print()
+    return([round(initial[0] + goal[0] / 2), round(initial[1] + goal[1] / 2), round(initial[2] + goal[2] / 2)])
+    
 
 def s_colour(input): # Solve Colour
     if input == "1":
