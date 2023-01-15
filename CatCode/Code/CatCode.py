@@ -371,80 +371,79 @@ def l_colour(initial, goal): # Lerp Colour
     print()
 
 def s_colour(input): # Solve Colour
-    try:
-        if input == "1":
-            return([10, 0, 0])
-        elif input ==  "2":
-            return([0, 20, 0])
-        elif input  ==  "3":
-            return([0, 0, 30])
-        elif input  ==  "4":
-            return([40, 0, 0])
-        elif input  ==  "5":
-            return([0, 50, 0])
-        elif input  ==  "6":
-            return([60, 0, 0])
-        elif input  ==  "7":
-            return([0, 70, 0])
-        elif input  ==  "8":
-            return([0, 0, 80])
-        elif input  ==  "9":
-            return([90, 0, 0])
-        elif input  ==  "0":
-            return([47, 156, 8])
-        elif input  ==  "q":
-            return([123, 123, 123])
-        elif input  ==  "w":
-            return([255, 128, 0])
-        elif input  ==  "e":
-            return([0, 128, 255])
-        elif input  ==  "r":
-            return([255, 0, 0])
-        elif input  ==  "t":
-            return([0, 255, 0])
-        elif input  ==  "y":
-            return([0, 0, 255])
-        elif input  ==  "u":
-            return([2, 184, 127])
-        elif input  ==  "i":
-            return([127, 255, 11])
-        elif input  ==  "o":
-            return([195, 125, 91])
-        elif input  ==  "p":
-            return([17, 218, 123])
-        elif input  ==  "a":
-            return([127, 118, 12])
-        elif input  ==  "s":
-            return([153, 173, 134])
-        elif input  ==  "d":
-            return([255, 255, 255])
-        elif input  ==  "f":
-            return([130, 165, 216])
-        elif input  ==  "g":
-            return([55, 55, 55])
-        elif input  ==  "h":
-            return([255, 165, 164])
-        elif input  ==  "j":
-            return([0, 0, 0])
-        elif input  ==  "k":
-            return([0, 255, 3])
-        elif input  ==  "l":
-            return([155, 246, 19])
-        elif input  ==  "z":
-            return([135, 212, 181])
-        elif input  ==  "x":
-            return([255, 0, 128])
-        elif input  ==  "c":
-            return([128, 0, 255])
-        elif input  ==  "v":
-            return([0, 0, 255])
-        elif input  ==  "b":
-            return([0, 255, 0])
-        elif input  ==  "n":
-            return([255, 0, 0])
-        elif input  ==  "m":
-            return([255, 78, 113])
-    except:
+    if input == "1":
+        return([10, 0, 0])
+    elif input ==  "2":
+        return([0, 20, 0])
+    elif input  ==  "3":
+        return([0, 0, 30])
+    elif input  ==  "4":
+        return([40, 0, 0])
+    elif input  ==  "5":
+        return([0, 50, 0])
+    elif input  ==  "6":
+        return([60, 0, 0])
+    elif input  ==  "7":
+        return([0, 70, 0])
+    elif input  ==  "8":
+        return([0, 0, 80])
+    elif input  ==  "9":
+        return([90, 0, 0])
+    elif input  ==  "0":
+        return([47, 156, 8])
+    elif input  ==  "q":
+        return([123, 123, 123])
+    elif input  ==  "w":
+        return([255, 128, 0])
+    elif input  ==  "e":
+        return([0, 128, 255])
+    elif input  ==  "r":
+        return([255, 0, 0])
+    elif input  ==  "t":
+        return([0, 255, 0])
+    elif input  ==  "y":
+        return([0, 0, 255])
+    elif input  ==  "u":
+        return([2, 184, 127])
+    elif input  ==  "i":
+        return([127, 255, 11])
+    elif input  ==  "o":
+        return([195, 125, 91])
+    elif input  ==  "p":
+        return([17, 218, 123])
+    elif input  ==  "a":
+        return([127, 118, 12])
+    elif input  ==  "s":
+        return([153, 173, 134])
+    elif input  ==  "d":
+        return([255, 255, 255])
+    elif input  ==  "f":
+        return([130, 165, 216])
+    elif input  ==  "g":
+        return([55, 55, 55])
+    elif input  ==  "h":
+        return([255, 165, 164])
+    elif input  ==  "j":
+        return([0, 0, 0])
+    elif input  ==  "k":
+        return([0, 255, 3])
+    elif input  ==  "l":
+        return([155, 246, 19])
+    elif input  ==  "z":
+        return([135, 212, 181])
+    elif input  ==  "x":
+        return([255, 0, 128])
+    elif input  ==  "c":
+        return([128, 0, 255])
+    elif input  ==  "v":
+        return([0, 0, 255])
+    elif input  ==  "b":
+        return([0, 255, 0])
+    elif input  ==  "n":
+        return([255, 0, 0])
+    elif input  ==  "m":
+        return([255, 78, 113])
+    else:
         return([55, 55, 55])
 
 
