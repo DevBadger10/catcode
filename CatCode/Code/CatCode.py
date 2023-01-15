@@ -12,8 +12,7 @@ def main():
         print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
         # raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
     if mode == False:
-        print(l_colour([32, 13, 28], [25, 155, 255]))
-        print(colour("Fhytrg"))
+        print(colour("fhytrg"))
     if mode == True:
         print()
     
@@ -294,77 +293,77 @@ def colour(input):
     for i in range(0, length - 1):
         print("RGB value: " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
         if input[i + 1] == "1":
-            print()
+            l_colour(output, [10, 0, 0])
         elif input[i+ 1]  ==  "2":
-            print()
+            l_colour(output, [0, 20, 0])
         elif input[i + 1]  ==  "3":
-            print()
+            l_colour(output, [0, 0, 30])
         elif input[i + 1]  ==  "4":
-            print()
+            l_colour(output, [40, 0, 0])
         elif input[i + 1]  ==  "5":
-            print()
+            l_colour(output, [0, 50, 0])
         elif input[i + 1]  ==  "6":
-            print()
+            l_colour(output, [60, 0, 0])
         elif input[i + 1]  ==  "7":
-            print()
+            l_colour(output, [0, 70, 0])
         elif input[i + 1]  ==  "8":
-            print()
+            l_colour(output, [0, 0, 80])
         elif input[i + 1]  ==  "9":
-            print()
+            l_colour(output, [90, 0, 0])
         elif input[i + 1]  ==  "0":
-            print()
+            l_colour(output, [47, 156, 8])
         elif input[i + 1]  ==  "q":
-            print()
+            l_colour(output, [123, 123, 123])
         elif input[i + 1]  ==  "w":
-            print()
+            l_colour(output, [255, 128, 0])
         elif input[i + 1]  ==  "e":
-            print()
+            l_colour(output, [0, 128, 255])
         elif input[i + 1]  ==  "r":
-            print()
+            l_colour(output, [255, 0, 0])
         elif input[i + 1]  ==  "t":
-            print()
+            l_colour(output, [0, 255, 0])
         elif input[i + 1]  ==  "y":
-            print()
+            l_colour(output, [0, 0, 255])
         elif input[i + 1]  ==  "u":
-            print()
+            l_colour(output, [2, 184, 127])
         elif input[i + 1]  ==  "i":
-            print()
+            l_colour(output, [127, 255, 11])
         elif input[i + 1]  ==  "o":
-            print()
+            l_colour(output, [195, 125, 91])
         elif input[i + 1]  ==  "p":
-            print()
+           l_colour(output, [17, 218, 123])
         elif input[i + 1]  ==  "a":
-            print()
+            l_colour(output, [127, 118, 12])
         elif input[i + 1]  ==  "s":
-            print()
+            l_colour(output, [153, 173, 134])
         elif input[i + 1]  ==  "d":
-            print()
+            l_colour(output, [255, 255, 255])
         elif input[i + 1]  ==  "f":
-            print()
+            l_colour(output, [130, 165, 216])
         elif input[i + 1]  ==  "g":
-            print()
+            l_colour(output, [55, 55, 55])
         elif input[i + 1]  ==  "h":
-            print()
+            l_colour(output, [255, 165, 164])
         elif input[i + 1]  ==  "j":
-            print()
+            l_colour(output, [0, 0, 0])
         elif input[i + 1]  ==  "k":
-            print()
+            l_colour(output, [0, 255, 3])
         elif input[i + 1]  ==  "l":
-            print()
+            l_colour(output, [155, 246, 19])
         elif input[i + 1]  ==  "z":
-            print()
+            l_colour(output, [135, 212, 181])
         elif input[i + 1]  ==  "x":
-            print()
+            l_colour(output, [255, 0, 128])
         elif input[i + 1]  ==  "c":
-            print()
+            l_colour(output, [128, 0, 255])
         elif input[i + 1]  ==  "v":
-            print()
+            l_colour(output, [0, 0, 255])
         elif input[i + 1]  ==  "b":
-            print()
+            l_colour(output, [0, 255, 0])
         elif input[i + 1]  ==  "n":
-            print()
+            l_colour(output, [255, 0, 0])
         elif input[i + 1]  ==  "m":
-            print()
+            l_colour(output, [255, 78, 113]) 
     print("RGB value: " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
     return("\n\rFinal Answer (RGB Value): " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
 
