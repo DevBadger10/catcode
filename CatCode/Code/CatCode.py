@@ -4,7 +4,7 @@ import sys
 def main():
     os.chdir(os.path.dirname(sys.argv[0]))
     if mode == False:
-        print(number("22"))
+        print(number("s1q2wrf5rgfvfthg vcf hybdt5htrg,j/.,l-0i;"))
     if mode == True:
         print()
     
@@ -20,12 +20,12 @@ try:
     else: 
         mode = True
 except:
-    raiseError("Error: Oops! Looks like you didn't supply a mode for us. Could you re-enter the command? If that doesn't help, look on the CatCode Wiki! ()")
+    raiseError("Error: Oops! Looks like you didn't supply a mode for us. Could you re-enter the command? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
 
 try:
     code = str(sys.argv[2])
 except:
-    raiseError("Error: Oops! Looks like you didn't supply a path to your code for us. Could you re-enter the command? If that doesn't help, look on the CatCode Wiki! ()")
+    raiseError("Error: Oops! Looks like you didn't supply a path to your code for us. Could you re-enter the command? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
 
 try:
     catec = int(sys.argv[3])
@@ -43,6 +43,7 @@ def number(input):
     #     print(n)
     # print("123457890"[5])
     for i in range(0, length):
+        print(str(output))
         if input[i] == "1":
             output += 1
         elif input[i]  ==  "2":
@@ -63,9 +64,9 @@ def number(input):
           output -= 9
         elif input[i]  ==  "0":
           if str(output).startswith("-"):
-              output = int(str(output[1:]))
+              output = float(str(output[1:]))
           else:
-              output = int("-" + str(output))
+              output = float("-" + str(output))
         elif input[i]  ==  "q":
           output *= 10
         elif input[i]  ==  "w":
@@ -124,9 +125,8 @@ def number(input):
         elif input[i]  ==  "m":
           if not input[i] == 0:
               output /= 3
-        # print(str(output))
         # print(str(i))
-    return(str(output))
+    return("\n\rFinal number: " + str(output))
 
 def turtle(input):
     for i in len(input):
