@@ -3,8 +3,16 @@ import sys
 
 def main():
     os.chdir(os.path.dirname(sys.argv[0]))
+
+    try:
+        file = open(code, "r")
+        code = file.read()
+        file.close()
+    except:
+        print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
+        # raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
     if mode == False:
-        print(number("s1q2wrf5rgfvfthg vcf hybdt5htrg,j/.,l-0i;"))
+        print(number("27"))
     if mode == True:
         print()
     
