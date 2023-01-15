@@ -12,7 +12,7 @@ def main():
         print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
         # raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
     if mode == False:
-        print(number("27"))
+        print(colour("Fhytrg"))
     if mode == True:
         print()
     
@@ -288,78 +288,164 @@ def game(input):
             print()
 
 def colour(input):
-    for i in len(input):
-        if input[i] == "1":
+    output = s_colour(input[0])
+    length = len(input)
+    for i in range(0, length - 1):
+        print("RGB value: " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
+        if input[i + 1] == "1":
             print()
-        elif input[i]  ==  "2":
+        elif input[i+ 1]  ==  "2":
             print()
-        elif input[i]  ==  "3":
+        elif input[i + 1]  ==  "3":
             print()
-        elif input[i]  ==  "4":
+        elif input[i + 1]  ==  "4":
             print()
-        elif input[i]  ==  "5":
+        elif input[i + 1]  ==  "5":
             print()
-        elif input[i]  ==  "6":
+        elif input[i + 1]  ==  "6":
             print()
-        elif input[i]  ==  "7":
+        elif input[i + 1]  ==  "7":
             print()
-        elif input[i]  ==  "8":
+        elif input[i + 1]  ==  "8":
             print()
-        elif input[i]  ==  "9":
+        elif input[i + 1]  ==  "9":
             print()
-        elif input[i]  ==  "0":
+        elif input[i + 1]  ==  "0":
             print()
-        elif input[i]  ==  "q":
+        elif input[i + 1]  ==  "q":
             print()
-        elif input[i]  ==  "w":
+        elif input[i + 1]  ==  "w":
             print()
-        elif input[i]  ==  "e":
+        elif input[i + 1]  ==  "e":
             print()
-        elif input[i]  ==  "r":
+        elif input[i + 1]  ==  "r":
             print()
-        elif input[i]  ==  "t":
+        elif input[i + 1]  ==  "t":
             print()
-        elif input[i]  ==  "y":
+        elif input[i + 1]  ==  "y":
             print()
-        elif input[i]  ==  "u":
+        elif input[i + 1]  ==  "u":
             print()
-        elif input[i]  ==  "i":
+        elif input[i + 1]  ==  "i":
             print()
-        elif input[i]  ==  "o":
+        elif input[i + 1]  ==  "o":
             print()
-        elif input[i]  ==  "p":
+        elif input[i + 1]  ==  "p":
             print()
-        elif input[i]  ==  "a":
+        elif input[i + 1]  ==  "a":
             print()
-        elif input[i]  ==  "s":
+        elif input[i + 1]  ==  "s":
             print()
-        elif input[i]  ==  "d":
+        elif input[i + 1]  ==  "d":
             print()
-        elif input[i]  ==  "f":
+        elif input[i + 1]  ==  "f":
             print()
-        elif input[i]  ==  "g":
+        elif input[i + 1]  ==  "g":
             print()
-        elif input[i]  ==  "h":
+        elif input[i + 1]  ==  "h":
             print()
-        elif input[i]  ==  "j":
+        elif input[i + 1]  ==  "j":
             print()
-        elif input[i]  ==  "k":
+        elif input[i + 1]  ==  "k":
             print()
-        elif input[i]  ==  "l":
+        elif input[i + 1]  ==  "l":
             print()
-        elif input[i]  ==  "z":
+        elif input[i + 1]  ==  "z":
             print()
-        elif input[i]  ==  "x":
+        elif input[i + 1]  ==  "x":
             print()
-        elif input[i]  ==  "c":
+        elif input[i + 1]  ==  "c":
             print()
-        elif input[i]  ==  "v":
+        elif input[i + 1]  ==  "v":
             print()
-        elif input[i]  ==  "b":
+        elif input[i + 1]  ==  "b":
             print()
-        elif input[i]  ==  "n":
+        elif input[i + 1]  ==  "n":
             print()
-        elif input[i]  ==  "m":
+        elif input[i + 1]  ==  "m":
             print()
+    print("RGB value: " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
+    return("\n\rFinal Answer (RGB Value): " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
+
+def l_colour(initial, goal): # Lerp Colour
+    print()
+
+def s_colour(input): # Solve Colour
+    try:
+        if input == "1":
+            return([10, 0, 0])
+        elif input ==  "2":
+            return([0, 20, 0])
+        elif input  ==  "3":
+            return([0, 0, 30])
+        elif input  ==  "4":
+            return([40, 0, 0])
+        elif input  ==  "5":
+            return([0, 50, 0])
+        elif input  ==  "6":
+            return([60, 0, 0])
+        elif input  ==  "7":
+            return([0, 70, 0])
+        elif input  ==  "8":
+            return([0, 0, 80])
+        elif input  ==  "9":
+            return([90, 0, 0])
+        elif input  ==  "0":
+            return([47, 156, 8])
+        elif input  ==  "q":
+            return([123, 123, 123])
+        elif input  ==  "w":
+            return([255, 128, 0])
+        elif input  ==  "e":
+            return([0, 128, 255])
+        elif input  ==  "r":
+            return([255, 0, 0])
+        elif input  ==  "t":
+            return([0, 255, 0])
+        elif input  ==  "y":
+            return([0, 0, 255])
+        elif input  ==  "u":
+            return([2, 184, 127])
+        elif input  ==  "i":
+            return([127, 255, 11])
+        elif input  ==  "o":
+            return([195, 125, 91])
+        elif input  ==  "p":
+            return([17, 218, 123])
+        elif input  ==  "a":
+            return([127, 118, 12])
+        elif input  ==  "s":
+            return([153, 173, 134])
+        elif input  ==  "d":
+            return([255, 255, 255])
+        elif input  ==  "f":
+            return([130, 165, 216])
+        elif input  ==  "g":
+            return([55, 55, 55])
+        elif input  ==  "h":
+            return([255, 165, 164])
+        elif input  ==  "j":
+            return([0, 0, 0])
+        elif input  ==  "k":
+            return([0, 255, 3])
+        elif input  ==  "l":
+            return([155, 246, 19])
+        elif input  ==  "z":
+            return([135, 212, 181])
+        elif input  ==  "x":
+            return([255, 0, 128])
+        elif input  ==  "c":
+            return([128, 0, 255])
+        elif input  ==  "v":
+            return([0, 0, 255])
+        elif input  ==  "b":
+            return([0, 255, 0])
+        elif input  ==  "n":
+            return([255, 0, 0])
+        elif input  ==  "m":
+            return([255, 78, 113])
+    except:
+        return([55, 55, 55])
+
 
 main()
