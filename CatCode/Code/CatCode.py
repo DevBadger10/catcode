@@ -134,6 +134,7 @@ def number(input):
           if not input[i] == 0:
               output /= 3
         # print(str(i))
+    print(str(output))
     return("\n\rFinal number: " + str(output))
 
 def turtle(input):
