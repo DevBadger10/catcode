@@ -12,7 +12,7 @@ def main():
         print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
         # raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
     if mode == False:
-        print(colour("fhytrg"))
+        print(colour("Delightful. Really delightful. I am the Globglogabgalab. I love books! And this basement is a true treasure trove!I am the Glob-glo-gab-galab.The Schwabbel-dabbel, wabbel-gabbel, flibber, blabber, blab Im full of Schwibbel, GlibberkindI am the yeast of thoughts and mindSchwabbel-dabbel, glibber, glabber, schwibbel, schwap, glabDibbel, dubbel, schwibbel, schwabbel, glibber glab schwapSchwabbel-dabbel, glibber, glabber, schwibbel, schwap, dabDibbel, dubbel, schwibbel, schwabbel, glibber schwap glabAh, splendid!Simply delicious! Hahaha. Mhmm!I am the Glob-glo-gab-galab.The Schwabbel-dabbel, wabbel-gabbel, flibber, blabber, blabI’m full of Schwibbel, GlibberkindI am the yeast of thoughts and mindSchwabbel-dabbel, glibber, glabber, schwibbel, schwap, glabDibbel, dubbel, schwibbel, schwabbel, glibber glab schwapSchwabbel-dabbel, glibber, glabber, schwibbel, schwap, dabDibbel, dubbel, schwibbel, schwabbel, glibber schwap glabAhhhhh!"))
     if mode == True:
         print()
     
@@ -368,7 +368,17 @@ def colour(input):
     return("\n\rFinal Answer (RGB Value): " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
 
 def l_colour(initial, goal): # Lerp Colour
-    return([round(initial[0] + goal[0] / 2), round(initial[1] + goal[1] / 2), round(initial[2] + goal[2] / 2)])
+    work0 = initial[0] + goal [0]
+    ret0 = round(work0 / 2)
+    # print(ret0)
+
+    work1 = initial[1] + goal [1]
+    ret1 = round(work1 / 2)
+
+    work2 = initial[2] + goal[2]
+    ret2 = round(work2 / 2)
+
+    return([ret0, ret1, ret2])
     
 
 def s_colour(input): # Solve Colour
