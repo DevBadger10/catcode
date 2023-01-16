@@ -262,442 +262,92 @@ def game(input):
     i = 1
 
     if input[i] == "1":
-        print()
+        gspeed = 50
     elif input[i]  ==  "2":
-        print()
+        gspeed = 40
     elif input[i]  ==  "3":
-        print()
+        gspeed = 30
     elif input[i]  ==  "4":
-        print()
+        gspeed = 15
     elif input[i]  ==  "5":
-        print()
+        gspeed = 15
     elif input[i]  ==  "6":
-        print()
+        gspeed = 15
     elif input[i]  ==  "7":
-        print()
+        gspeed = 15
     elif input[i]  ==  "8":
-        print()
+        gspeed = 30
     elif input[i]  ==  "9":
-        print()
+        gspeed = 40
     elif input[i]  ==  "0":
-        print()
+        gspeed = 50
     elif input[i]  ==  "q":
-        print()
+        gspeed = 10
     elif input[i]  ==  "w":
-        print()
+        gspeed = 10
     elif input[i]  ==  "e":
-        print()
+        gspeed = 10
     elif input[i]  ==  "r":
-        print()
+        gspeed = 5
     elif input[i]  ==  "t":
-        print()
+        gspeed = 5
     elif input[i]  ==  "y":
-        print()
+        gspeed = 5
     elif input[i]  ==  "u":
-        print()
+        gspeed = 10
     elif input[i]  ==  "i":
-        print()
+        gspeed = 10
     elif input[i]  ==  "o":
-        print()
+        gspeed = 10
     elif input[i]  ==  "p":
-        print()
+        gspeed = 10
     elif input[i]  ==  "a":
-        print()
+        gspeed = 10
     elif input[i]  ==  "s":
-        print()
+        gspeed = 10
     elif input[i]  ==  "d":
-        print()
+        gspeed = 5
     elif input[i]  ==  "f":
-        print()
+        gspeed = 5
     elif input[i]  ==  "g":
-        print()
+        gspeed = 5
     elif input[i]  ==  "h":
-        print()
+        gspeed = 5
     elif input[i]  ==  "j":
-        print()
+        gspeed = 5
     elif input[i]  ==  "k":
-        print()
+        gspeed = 10
     elif input[i]  ==  "l":
-        print()
+        gspeed = 10
     elif input[i]  ==  "z":
-        print()
+        gspeed = 100
     elif input[i]  ==  "x":
-        print()
+        gspeed = 10
     elif input[i]  ==  "c":
-        print()
+        gspeed = 5
     elif input[i]  ==  "v":
-        print()
+        gspeed = 5
     elif input[i]  ==  "b":
-        print()
+        gspeed = 5
     elif input[i]  ==  "n":
-        print()
+        gspeed = 5
     elif input[i]  ==  "m":
-        print()
+        gspeed = 100
 
-    if input[i] == "1":
-        print()
-    elif input[i]  ==  "2":
-        print()
-    elif input[i]  ==  "3":
-        print()
-    elif input[i]  ==  "4":
-        print()
-    elif input[i]  ==  "5":
-        print()
-    elif input[i]  ==  "6":
-        print()
-    elif input[i]  ==  "7":
-        print()
-    elif input[i]  ==  "8":
-        print()
-    elif input[i]  ==  "9":
-        print()
-    elif input[i]  ==  "0":
-        print()
-    elif input[i]  ==  "q":
-        print()
-    elif input[i]  ==  "w":
-        print()
-    elif input[i]  ==  "e":
-        print()
-    elif input[i]  ==  "r":
-        print()
-    elif input[i]  ==  "t":
-        print()
-    elif input[i]  ==  "y":
-        print()
-    elif input[i]  ==  "u":
-        print()
-    elif input[i]  ==  "i":
-        print()
-    elif input[i]  ==  "o":
-        print()
-    elif input[i]  ==  "p":
-        print()
-    elif input[i]  ==  "a":
-        print()
-    elif input[i]  ==  "s":
-        print()
-    elif input[i]  ==  "d":
-        print()
-    elif input[i]  ==  "f":
-        print()
-    elif input[i]  ==  "g":
-        print()
-    elif input[i]  ==  "h":
-        print()
-    elif input[i]  ==  "j":
-        print()
-    elif input[i]  ==  "k":
-        print()
-    elif input[i]  ==  "l":
-        print()
-    elif input[i]  ==  "z":
-        print()
-    elif input[i]  ==  "x":
-        print()
-    elif input[i]  ==  "c":
-        print()
-    elif input[i]  ==  "v":
-        print()
-    elif input[i]  ==  "b":
-        print()
-    elif input[i]  ==  "n":
-        print()
-    elif input[i]  ==  "m":
-        print()
-
-    if input[i] == "1":
-        print()
-    elif input[i]  ==  "2":
-        print()
-    elif input[i]  ==  "3":
-        print()
-    elif input[i]  ==  "4":
-        print()
-    elif input[i]  ==  "5":
-        print()
-    elif input[i]  ==  "6":
-        print()
-    elif input[i]  ==  "7":
-        print()
-    elif input[i]  ==  "8":
-        print()
-    elif input[i]  ==  "9":
-        print()
-    elif input[i]  ==  "0":
-        print()
-    elif input[i]  ==  "q":
-        print()
-    elif input[i]  ==  "w":
-        print()
-    elif input[i]  ==  "e":
-        print()
-    elif input[i]  ==  "r":
-        print()
-    elif input[i]  ==  "t":
-        print()
-    elif input[i]  ==  "y":
-        print()
-    elif input[i]  ==  "u":
-        print()
-    elif input[i]  ==  "i":
-        print()
-    elif input[i]  ==  "o":
-        print()
-    elif input[i]  ==  "p":
-        print()
-    elif input[i]  ==  "a":
-        print()
-    elif input[i]  ==  "s":
-        print()
-    elif input[i]  ==  "d":
-        print()
-    elif input[i]  ==  "f":
-        print()
-    elif input[i]  ==  "g":
-        print()
-    elif input[i]  ==  "h":
-        print()
-    elif input[i]  ==  "j":
-        print()
-    elif input[i]  ==  "k":
-        print()
-    elif input[i]  ==  "l":
-        print()
-    elif input[i]  ==  "z":
-        print()
-    elif input[i]  ==  "x":
-        print()
-    elif input[i]  ==  "c":
-        print()
-    elif input[i]  ==  "v":
-        print()
-    elif input[i]  ==  "b":
-        print()
-    elif input[i]  ==  "n":
-        print()
-    elif input[i]  ==  "m":
-        print()
+    if input[2] and input[3]:
+        gcol1 = colour(input[2] + input[3])
     
-    if input[i] == "1":
-        print()
-    elif input[i]  ==  "2":
-        print()
-    elif input[i]  ==  "3":
-        print()
-    elif input[i]  ==  "4":
-        print()
-    elif input[i]  ==  "5":
-        print()
-    elif input[i]  ==  "6":
-        print()
-    elif input[i]  ==  "7":
-        print()
-    elif input[i]  ==  "8":
-        print()
-    elif input[i]  ==  "9":
-        print()
-    elif input[i]  ==  "0":
-        print()
-    elif input[i]  ==  "q":
-        print()
-    elif input[i]  ==  "w":
-        print()
-    elif input[i]  ==  "e":
-        print()
-    elif input[i]  ==  "r":
-        print()
-    elif input[i]  ==  "t":
-        print()
-    elif input[i]  ==  "y":
-        print()
-    elif input[i]  ==  "u":
-        print()
-    elif input[i]  ==  "i":
-        print()
-    elif input[i]  ==  "o":
-        print()
-    elif input[i]  ==  "p":
-        print()
-    elif input[i]  ==  "a":
-        print()
-    elif input[i]  ==  "s":
-        print()
-    elif input[i]  ==  "d":
-        print()
-    elif input[i]  ==  "f":
-        print()
-    elif input[i]  ==  "g":
-        print()
-    elif input[i]  ==  "h":
-        print()
-    elif input[i]  ==  "j":
-        print()
-    elif input[i]  ==  "k":
-        print()
-    elif input[i]  ==  "l":
-        print()
-    elif input[i]  ==  "z":
-        print()
-    elif input[i]  ==  "x":
-        print()
-    elif input[i]  ==  "c":
-        print()
-    elif input[i]  ==  "v":
-        print()
-    elif input[i]  ==  "b":
-        print()
-    elif input[i]  ==  "n":
-        print()
-    elif input[i]  ==  "m":
-        print()
+    if input[4] and input[5]:
+        gcol2 = colour(input[4] + input[5])
     
-    if input[i] == "1":
-        print()
-    elif input[i]  ==  "2":
-        print()
-    elif input[i]  ==  "3":
-        print()
-    elif input[i]  ==  "4":
-        print()
-    elif input[i]  ==  "5":
-        print()
-    elif input[i]  ==  "6":
-        print()
-    elif input[i]  ==  "7":
-        print()
-    elif input[i]  ==  "8":
-        print()
-    elif input[i]  ==  "9":
-        print()
-    elif input[i]  ==  "0":
-        print()
-    elif input[i]  ==  "q":
-        print()
-    elif input[i]  ==  "w":
-        print()
-    elif input[i]  ==  "e":
-        print()
-    elif input[i]  ==  "r":
-        print()
-    elif input[i]  ==  "t":
-        print()
-    elif input[i]  ==  "y":
-        print()
-    elif input[i]  ==  "u":
-        print()
-    elif input[i]  ==  "i":
-        print()
-    elif input[i]  ==  "o":
-        print()
-    elif input[i]  ==  "p":
-        print()
-    elif input[i]  ==  "a":
-        print()
-    elif input[i]  ==  "s":
-        print()
-    elif input[i]  ==  "d":
-        print()
-    elif input[i]  ==  "f":
-        print()
-    elif input[i]  ==  "g":
-        print()
-    elif input[i]  ==  "h":
-        print()
-    elif input[i]  ==  "j":
-        print()
-    elif input[i]  ==  "k":
-        print()
-    elif input[i]  ==  "l":
-        print()
-    elif input[i]  ==  "z":
-        print()
-    elif input[i]  ==  "x":
-        print()
-    elif input[i]  ==  "c":
-        print()
-    elif input[i]  ==  "v":
-        print()
-    elif input[i]  ==  "b":
-        print()
-    elif input[i]  ==  "n":
-        print()
-    elif input[i]  ==  "m":
-        print()
-
-    if input[i] == "1":
-        print()
-    elif input[i]  ==  "2":
-        print()
-    elif input[i]  ==  "3":
-        print()
-    elif input[i]  ==  "4":
-        print()
-    elif input[i]  ==  "5":
-        print()
-    elif input[i]  ==  "6":
-        print()
-    elif input[i]  ==  "7":
-        print()
-    elif input[i]  ==  "8":
-        print()
-    elif input[i]  ==  "9":
-        print()
-    elif input[i]  ==  "0":
-        print()
-    elif input[i]  ==  "q":
-        print()
-    elif input[i]  ==  "w":
-        print()
-    elif input[i]  ==  "e":
-        print()
-    elif input[i]  ==  "r":
-        print()
-    elif input[i]  ==  "t":
-        print()
-    elif input[i]  ==  "y":
-        print()
-    elif input[i]  ==  "u":
-        print()
-    elif input[i]  ==  "i":
-        print()
-    elif input[i]  ==  "o":
-        print()
-    elif input[i]  ==  "p":
-        print()
-    elif input[i]  ==  "a":
-        print()
-    elif input[i]  ==  "s":
-        print()
-    elif input[i]  ==  "d":
-        print()
-    elif input[i]  ==  "f":
-        print()
-    elif input[i]  ==  "g":
-        print()
-    elif input[i]  ==  "h":
-        print()
-    elif input[i]  ==  "j":
-        print()
-    elif input[i]  ==  "k":
-        print()
-    elif input[i]  ==  "l":
-        print()
-    elif input[i]  ==  "z":
-        print()
-    elif input[i]  ==  "x":
-        print()
-    elif input[i]  ==  "c":
-        print()
-    elif input[i]  ==  "v":
-        print()
-    elif input[i]  ==  "b":
-        print()
-    elif input[i]  ==  "n":
-        print()
-    elif input[i]  ==  "m":
-        print()
+    if input[6] and input[7]:
+        gcol3 = colour(input[6] + input[7])
+    
+    if input[8] and input[9]:
+        gcol4 = colour(input[8] + input[9])
+    
+    if input[10] and input[11]:
+        gcol5 = colour(input[10] + input[11])
 
 def colour(input):
     output = s_colour(input[0])
