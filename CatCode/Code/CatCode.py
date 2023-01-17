@@ -360,11 +360,14 @@ def execPong(speed, col1, col2):
     toExec = """
 # Import the pygame library and initialise the game engine
 import pygame
-from random import randint # This is created by https://www.101computing.net/pong-tutorial-using-pygame-adding-a-scoring-system/ I simply brought it into one file and made the speed customizeable. 
+from random import * # This is created by https://www.101computing.net/pong-tutorial-using-pygame-adding-a-scoring-system/ I simply brought it into one file and made the speed customizeable. 
+
+# col1 = [""" + str(col1[0]) + """,""" + str(col1[1]) + """,""" + str(col1[2]) + """]
+# col2 = [""" + str(col2[0]) + """,""" + str(col2[1]) + """,""" + str(col2[2]) + """]
 
 speed = """ + str(speed) + """
-BLACK = (""" + str(col1[0]) + """,""" + str(col1[1]) + """,""" + str(col1[2]) + """)
-WHITE = (""" + str(col2[0]) + """,""" + str(col2[1]) + """,""" + str(col2[2]) + """)
+# BLACK = (col1[0],col1[1],col1[2]) 
+# WHITE = (col2[0],col2[1],col2[2])
 
 pygame.init()
 
@@ -376,8 +379,8 @@ class Paddle(pygame.sprite.Sprite):
         # Pass in the color of the Paddle, its width and height.
         # Set the background color and set it to be transparent
         self.image = pygame.Surface([width, height])
-        self.image.fill(""" + str(col1[0]) + """,""" + str(col1[1]) + """,""" + str(col1[2]) + """)
-        self.image.set_colorkey(BLACK)
+        self.image.fill(pygame.Color(""" + str(col1[0]) + """,""" + str(col1[1]) + """,""" + str(col1[2]) + """))
+        self.image.set_colorkey(pygame.Color(""" + str(col1[0]) + """,""" + str(col1[1]) + """,""" + str(col1[2]) + """))
 
         # Draw the paddle (a rectangle!)
         pygame.draw.rect(self.image, color, [0, 0, width, height])
@@ -401,8 +404,8 @@ class Ball(pygame.sprite.Sprite):
         # Pass in the color of the ball, its width and height.
         # Set the background color and set it to be transparent
         self.image = pygame.Surface([width, height])
-        self.image.fill(BLACK)
-        self.image.set_colorkey(BLACK)
+        self.image.fill(pygame.Color(""" + str(col1[0]) + """,""" + str(col1[1]) + """,""" + str(col1[2]) + """))
+        self.image.set_colorkey(pygame.Color(""" + str(col1[0]) + """,""" + str(col1[1]) + """,""" + str(col1[2]) + """))
 
         # Draw the ball (a rectangle!)
         pygame.draw.rect(self.image, color, [0, 0, width, height])
@@ -422,15 +425,15 @@ size = (700, 500)
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Pong")
 
-paddleA = Paddle(WHITE, 10, 100)
+paddleA = Paddle(pygame.Color(""" + str(col2[0]) + """,""" + str(col2[1]) + """,""" + str(col2[2]) + """), 10, 100)
 paddleA.rect.x = 20
 paddleA.rect.y = 200
 
-paddleB = Paddle(WHITE, 10, 100)
+paddleB = Paddle(pygame.Color(""" + str(col2[0]) + """,""" + str(col2[1]) + """,""" + str(col2[2]) + """), 10, 100)
 paddleB.rect.x = 670
 paddleB.rect.y = 200
 
-ball = Ball(WHITE,10,10)
+ball = Ball(pygame.Color(""" + str(col2[0]) + """,""" + str(col2[1]) + """,""" + str(col2[2]) + """),10,10)
 ball.rect.x = 345
 ball.rect.y = 195
 
@@ -492,17 +495,17 @@ while carryOn:
       ball.bounce()
     # --- Drawing code should go here
     # First, clear the screen to black. 
-    screen.fill(BLACK)
+    screen.fill(pygame.Color(""" + str(col1[0]) + """,""" + str(col1[1]) + """,""" + str(col1[2]) + """))
     #Draw the net
-    pygame.draw.line(screen, WHITE, [349, 0], [349, 500], 5)
+    pygame.draw.line(screen, pygame.Color(""" + str(col2[0]) + """,""" + str(col2[1]) + """,""" + str(col2[2]) + """), [349, 0], [349, 500], 5)
     #Now let's draw all the sprites in one go. (For now we only have 2 sprites!)
     all_sprites_list.draw(screen) 
 
     #Display scores:
     font = pygame.font.Font(None, 74)
-    text = font.render(str(scoreA), 1, WHITE)
+    text = font.render(str(scoreA), 1, pygame.Color(""" + str(col2[0]) + """,""" + str(col2[1]) + """,""" + str(col2[2]) + """))
     screen.blit(text, (250,10))
-    text = font.render(str(scoreB), 1, WHITE)
+    text = font.render(str(scoreB), 1, pygame.Color(""" + str(col2[0]) + """,""" + str(col2[1]) + """,""" + str(col2[2]) + """))
     screen.blit(text, (420,10))
 
     # --- Go ahead and update the screen with what we've drawn.
@@ -513,6 +516,7 @@ while carryOn:
 #Once we have exited the main program loop we can stop the game engine:
 pygame.quit()"""
 
+    print(toExec)
     print("Game starting...")
     exec(toExec)
 
