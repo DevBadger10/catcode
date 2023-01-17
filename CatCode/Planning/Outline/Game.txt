@@ -1,6 +1,6 @@
 Premise: The type of game is defined by the first character. There are 2 possible options:
-1. Snake
-2. Pong
+1. Pong
+2. Snake
 The next character defines the Speed, then colours (either two or five) via Colour (Abstract), then the others are discarded, as PyGame is unknown territory to me, and while the original plan was to make this with Godot, Python seemed better, but not for this. But hey! A single keyboard step gives you a game now. 
 
 

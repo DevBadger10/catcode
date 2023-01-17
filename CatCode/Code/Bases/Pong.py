@@ -4,8 +4,11 @@ from random import randint # This is created by https://www.101computing.net/pon
 
 # CUSTOMIZE THESE FOR CATEC 2
 speed = 10
+
+col1 = [55,55,55]
+
 # Define some colors
-BLACK = (0,0,0)
+BLACK = (col1[0],col1[1],col1[2])
 WHITE = (255,255,255)
 
 class Paddle(pygame.sprite.Sprite):

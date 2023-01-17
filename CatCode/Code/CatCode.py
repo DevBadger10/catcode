@@ -1,6 +1,8 @@
 import os
 import sys
 
+import pygame
+
 def main():
     os.chdir(os.path.dirname(sys.argv[0]))
 
@@ -12,7 +14,7 @@ def main():
         print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
         # raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
     if mode == False:
-        print(colour("kiifgdilhjojojojojojoljoljoljoljoljoljoljoljollllllllllllllllolooooo"))
+        game("1ggggggggggggggggggggggggggggggggg")
     if mode == True:
         print()
     
@@ -215,11 +217,11 @@ def turtle(input):
 def game(input):
     gtype = False
     gspeed = 5
-    gcol1 = colour("gg")
-    gcol2 = colour("gh")
-    gcol3 = colour("hg")
-    gcol4 = colour("hh")
-    gcol5 = colour("yg")
+    gcol1 = colour("gg", False)
+    gcol2 = colour("gh", False)
+    gcol3 = colour("hg", False)
+    gcol4 = colour("hh", False)
+    gcol5 = colour("yg", False)
 
     i = 0
     if input[i]  ==  "2":
@@ -335,25 +337,193 @@ def game(input):
         gspeed = 100
 
     if input[2] and input[3]:
-        gcol1 = colour(input[2] + input[3])
+        gcol1 = colour(input[2] + input[3], False)
     
     if input[4] and input[5]:
-        gcol2 = colour(input[4] + input[5])
+        gcol2 = colour(input[4] + input[5], False)
     
     if input[6] and input[7]:
-        gcol3 = colour(input[6] + input[7])
+        gcol3 = colour(input[6] + input[7], False)
     
     if input[8] and input[9]:
-        gcol4 = colour(input[8] + input[9])
+        gcol4 = colour(input[8] + input[9], False)
     
     if input[10] and input[11]:
-        gcol5 = colour(input[10] + input[11])
+        gcol5 = colour(input[10] + input[11], False)
 
-def colour(input):
+    if gtype == False:
+        execPong(gspeed, gcol1, gcol2)
+    if gtype == True:
+        execSnake(gspeed, gcol1, gcol2, gcol3, gcol4, gcol5)
+
+def execPong(speed, col1, col2):
+    toExec = """
+# Import the pygame library and initialise the game engine
+import pygame
+from random import randint # This is created by https://www.101computing.net/pong-tutorial-using-pygame-adding-a-scoring-system/ I simply brought it into one file and made the speed customizeable. 
+
+speed = """ + str(speed) + """
+BLACK = (""" + str(col1[0]) + """,""" + str(col1[1]) + """,""" + str(col1[2]) + """)
+WHITE = (""" + str(col2[0]) + """,""" + str(col2[1]) + """,""" + str(col2[2]) + """)
+
+pygame.init()
+
+class Paddle(pygame.sprite.Sprite):
+    #This class represents a paddle. It derives from the "Sprite" class in Pygame.
+    def __init__(self, color, width, height):
+        # Call the parent class (Sprite) constructor
+        super().__init__()
+        # Pass in the color of the Paddle, its width and height.
+        # Set the background color and set it to be transparent
+        self.image = pygame.Surface([width, height])
+        self.image.fill(""" + str(col1[0]) + """,""" + str(col1[1]) + """,""" + str(col1[2]) + """)
+        self.image.set_colorkey(BLACK)
+
+        # Draw the paddle (a rectangle!)
+        pygame.draw.rect(self.image, color, [0, 0, width, height])
+        # Fetch the rectangle object that has the dimensions of the image.
+        self.rect = self.image.get_rect()
+    def moveUp(self, pixels):
+        self.rect.y -= pixels
+        #Check that you are not going too far (off the screen)
+        if self.rect.y < 0:
+          self.rect.y = 0
+    def moveDown(self, pixels):
+        self.rect.y += pixels
+        #Check that you are not going too far (off the screen)
+        if self.rect.y > 400:
+          self.rect.y = 400
+class Ball(pygame.sprite.Sprite):
+    #This class represents a ball. It derives from the "Sprite" class in Pygame.
+    def __init__(self, color, width, height):
+        # Call the parent class (Sprite) constructor
+        super().__init__()
+        # Pass in the color of the ball, its width and height.
+        # Set the background color and set it to be transparent
+        self.image = pygame.Surface([width, height])
+        self.image.fill(BLACK)
+        self.image.set_colorkey(BLACK)
+
+        # Draw the ball (a rectangle!)
+        pygame.draw.rect(self.image, color, [0, 0, width, height])
+        self.velocity = [randint(4,8),randint(-8,8)]
+        # Fetch the rectangle object that has the dimensions of the image.
+        self.rect = self.image.get_rect()
+    def update(self):
+        self.rect.x += self.velocity[0]
+        self.rect.y += self.velocity[1]
+    def bounce(self):
+        self.velocity[0] = -self.velocity[0]
+        self.velocity[1] = randint(-8,8)
+pygame.init()
+
+# Open a new window
+size = (700, 500)
+screen = pygame.display.set_mode(size)
+pygame.display.set_caption("Pong")
+
+paddleA = Paddle(WHITE, 10, 100)
+paddleA.rect.x = 20
+paddleA.rect.y = 200
+
+paddleB = Paddle(WHITE, 10, 100)
+paddleB.rect.x = 670
+paddleB.rect.y = 200
+
+ball = Ball(WHITE,10,10)
+ball.rect.x = 345
+ball.rect.y = 195
+
+#This will be a list that will contain all the sprites we intend to use in our game.
+all_sprites_list = pygame.sprite.Group()
+
+# Add the 2 paddles and the ball to the list of objects
+all_sprites_list.add(paddleA)
+all_sprites_list.add(paddleB)
+all_sprites_list.add(ball)
+
+# The loop will carry on until the user exits the game (e.g. clicks the close button).
+carryOn = True
+
+# The clock will be used to control how fast the screen updates
+clock = pygame.time.Clock()
+
+#Initialise player scores
+scoreA = 0
+scoreB = 0
+
+# -------- Main Program Loop -----------
+while carryOn:
+    # --- Main event loop
+    for event in pygame.event.get(): # User did something
+        if event.type == pygame.QUIT: # If user clicked close
+              carryOn = False # Flag that we are done so we exit this loop
+        elif event.type==pygame.KEYDOWN:
+                if event.key==pygame.K_x: #Pressing the x Key will quit the game
+                     carryOn=False
+
+    #Moving the paddles when the use uses the arrow keys (player A) or "W/S" keys (player B) 
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_w]:
+        paddleA.moveUp(speed)
+    if keys[pygame.K_s]:
+        paddleA.moveDown(speed)
+    if keys[pygame.K_UP]:
+        paddleB.moveUp(speed)
+    if keys[pygame.K_DOWN]:
+        paddleB.moveDown(speed)    
+
+    # --- Game logic should go here
+    all_sprites_list.update()
+    #Check if the ball is bouncing against any of the 4 walls:
+    if ball.rect.x>=690:
+        scoreA+=1
+        ball.velocity[0] = -ball.velocity[0]
+    if ball.rect.x<=0:
+        scoreB+=1
+        ball.velocity[0] = -ball.velocity[0]
+    if ball.rect.y>490:
+        ball.velocity[1] = -ball.velocity[1]
+    if ball.rect.y<0:
+        ball.velocity[1] = -ball.velocity[1]     
+
+    #Detect collisions between the ball and the paddles
+    if pygame.sprite.collide_mask(ball, paddleA) or pygame.sprite.collide_mask(ball, paddleB):
+      ball.bounce()
+    # --- Drawing code should go here
+    # First, clear the screen to black. 
+    screen.fill(BLACK)
+    #Draw the net
+    pygame.draw.line(screen, WHITE, [349, 0], [349, 500], 5)
+    #Now let's draw all the sprites in one go. (For now we only have 2 sprites!)
+    all_sprites_list.draw(screen) 
+
+    #Display scores:
+    font = pygame.font.Font(None, 74)
+    text = font.render(str(scoreA), 1, WHITE)
+    screen.blit(text, (250,10))
+    text = font.render(str(scoreB), 1, WHITE)
+    screen.blit(text, (420,10))
+
+    # --- Go ahead and update the screen with what we've drawn.
+    pygame.display.flip()
+    # --- Limit to 60 frames per second
+    clock.tick(60)
+
+#Once we have exited the main program loop we can stop the game engine:
+pygame.quit()"""
+
+    print("Game starting...")
+    exec(toExec)
+
+def execSnake(speed, col1, col2, col3, col4, col5):
+    print()
+
+def colour(input, prnt):
     output = s_colour(input[0])
     length = len(input)
     for i in range(0, length - 1):
-        print("RGB value: " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
+        if prnt: print("RGB value: " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
         if input[i + 1] == "1":
             output = l_colour(output, [10, 0, 0])
         elif input[i+ 1]  ==  "2":
@@ -426,8 +596,9 @@ def colour(input):
             output = l_colour(output, [255, 0, 0])
         elif input[i + 1]  ==  "m":
             output = l_colour(output, [255, 78, 113]) 
-    print("RGB value: " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
-    return("\n\rFinal Answer (RGB Value): " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
+    if prnt: print("RGB value: " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
+    if prnt: return("\n\rFinal Answer (RGB Value): " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
+    elif not prnt: return(output)
 
 def l_colour(initial, goal): # Lerp Colour
     work0 = initial[0] + goal [0]
