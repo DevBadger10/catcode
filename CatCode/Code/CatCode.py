@@ -361,13 +361,10 @@ def execPong(speed, col1, col2):
 # Import the pygame library and initialise the game engine
 import pygame
 from random import * # This is created by https://www.101computing.net/pong-tutorial-using-pygame-adding-a-scoring-system/ I simply brought it into one file and made the speed customizeable. 
-
-# col1 = [""" + str(col1[0]) + """,""" + str(col1[1]) + """,""" + str(col1[2]) + """]
-# col2 = [""" + str(col2[0]) + """,""" + str(col2[1]) + """,""" + str(col2[2]) + """]
+from random import randint
+import random
 
 speed = """ + str(speed) + """
-# BLACK = (col1[0],col1[1],col1[2]) 
-# WHITE = (col2[0],col2[1],col2[2])
 
 pygame.init()
 
@@ -399,6 +396,7 @@ class Paddle(pygame.sprite.Sprite):
 class Ball(pygame.sprite.Sprite):
     #This class represents a ball. It derives from the "Sprite" class in Pygame.
     def __init__(self, color, width, height):
+        from random import randint
         # Call the parent class (Sprite) constructor
         super().__init__()
         # Pass in the color of the ball, its width and height.
@@ -413,9 +411,11 @@ class Ball(pygame.sprite.Sprite):
         # Fetch the rectangle object that has the dimensions of the image.
         self.rect = self.image.get_rect()
     def update(self):
+        from random import randint
         self.rect.x += self.velocity[0]
         self.rect.y += self.velocity[1]
     def bounce(self):
+        from random import randint
         self.velocity[0] = -self.velocity[0]
         self.velocity[1] = randint(-8,8)
 pygame.init()
