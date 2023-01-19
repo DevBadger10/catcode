@@ -213,150 +213,137 @@ def turtle(input):
             print()
 
 def game(input):
-    try:
-        noError = True
-        gtype = False
+    gtype = False
+    gspeed = 5
+    gcol1 = colour("gg", False)
+    gcol2 = colour("gh", False)
+    gcol3 = colour("hg", False)
+    gcol4 = colour("hh", False)
+    gcol5 = colour("yg", False)
+    i = 0
+    if input[i]  ==  "2":
+        gtype = True
+    elif input[i]  ==  "4":
+        gtype = True
+    elif input[i]  ==  "6":
+        gtype = True
+    elif input[i]  ==  "8":
+        gtype = True
+    elif input[i]  ==  "0":
+        gtype = True
+    elif input[i]  ==  "w":
+        gtype = True
+    elif input[i]  ==  "r":
+        gtype = True
+    elif input[i]  ==  "y":
+        gtype = True
+    elif input[i]  ==  "i":
+        gtype = True
+    elif input[i]  ==  "p":
+        gtype = True
+    elif input[i]  ==  "s":
+        gtype = True
+    elif input[i]  ==  "f":
+        gtype = True
+    elif input[i]  ==  "h":
+        gtype = True
+    elif input[i]  ==  "k":
+        gtype = True
+    elif input[i]  ==  "z":
+        gtype = True
+    elif input[i]  ==  "c":
+        gtype = True
+    elif input[i]  ==  "b":
+        gtype = True
+    elif input[i]  ==  "m":
+        gtype = True
+    i = 1
+    if input[i] == "1":
+        gspeed = 50
+    elif input[i]  ==  "2":
+        gspeed = 40
+    elif input[i]  ==  "3":
+        gspeed = 30
+    elif input[i]  ==  "4":
+        gspeed = 15
+    elif input[i]  ==  "5":
+        gspeed = 15
+    elif input[i]  ==  "6":
+        gspeed = 15
+    elif input[i]  ==  "7":
+        gspeed = 15
+    elif input[i]  ==  "8":
+        gspeed = 30
+    elif input[i]  ==  "9":
+        gspeed = 40
+    elif input[i]  ==  "0":
+        gspeed = 50
+    elif input[i]  ==  "q":
+        gspeed = 10
+    elif input[i]  ==  "w":
+        gspeed = 10
+    elif input[i]  ==  "e":
+        gspeed = 10
+    elif input[i]  ==  "r":
         gspeed = 5
-        gcol1 = colour("gg", False)
-        gcol2 = colour("gh", False)
-        gcol3 = colour("hg", False)
-        gcol4 = colour("hh", False)
-        gcol5 = colour("yg", False)
-
-        i = 0
-        if input[i]  ==  "2":
-            gtype = True
-        elif input[i]  ==  "4":
-            gtype = True
-        elif input[i]  ==  "6":
-            gtype = True
-        elif input[i]  ==  "8":
-            gtype = True
-        elif input[i]  ==  "0":
-            gtype = True
-        elif input[i]  ==  "w":
-            gtype = True
-        elif input[i]  ==  "r":
-            gtype = True
-        elif input[i]  ==  "y":
-            gtype = True
-        elif input[i]  ==  "i":
-            gtype = True
-        elif input[i]  ==  "p":
-            gtype = True
-        elif input[i]  ==  "s":
-            gtype = True
-        elif input[i]  ==  "f":
-            gtype = True
-        elif input[i]  ==  "h":
-            gtype = True
-        elif input[i]  ==  "k":
-            gtype = True
-        elif input[i]  ==  "z":
-            gtype = True
-        elif input[i]  ==  "c":
-            gtype = True
-        elif input[i]  ==  "b":
-            gtype = True
-        elif input[i]  ==  "m":
-            gtype = True
-
-        i = 1
-
-        if input[i] == "1":
-            gspeed = 50
-        elif input[i]  ==  "2":
-            gspeed = 40
-        elif input[i]  ==  "3":
-            gspeed = 30
-        elif input[i]  ==  "4":
-            gspeed = 15
-        elif input[i]  ==  "5":
-            gspeed = 15
-        elif input[i]  ==  "6":
-            gspeed = 15
-        elif input[i]  ==  "7":
-            gspeed = 15
-        elif input[i]  ==  "8":
-            gspeed = 30
-        elif input[i]  ==  "9":
-            gspeed = 40
-        elif input[i]  ==  "0":
-            gspeed = 50
-        elif input[i]  ==  "q":
-            gspeed = 10
-        elif input[i]  ==  "w":
-            gspeed = 10
-        elif input[i]  ==  "e":
-            gspeed = 10
-        elif input[i]  ==  "r":
-            gspeed = 5
-        elif input[i]  ==  "t":
-            gspeed = 5
-        elif input[i]  ==  "y":
-            gspeed = 5
-        elif input[i]  ==  "u":
-            gspeed = 10
-        elif input[i]  ==  "i":
-            gspeed = 10
-        elif input[i]  ==  "o":
-            gspeed = 10
-        elif input[i]  ==  "p":
-            gspeed = 10
-        elif input[i]  ==  "a":
-            gspeed = 10
-        elif input[i]  ==  "s":
-            gspeed = 10
-        elif input[i]  ==  "d":
-            gspeed = 5
-        elif input[i]  ==  "f":
-            gspeed = 5
-        elif input[i]  ==  "g":
-            gspeed = 5
-        elif input[i]  ==  "h":
-            gspeed = 5
-        elif input[i]  ==  "j":
-            gspeed = 5
-        elif input[i]  ==  "k":
-            gspeed = 10
-        elif input[i]  ==  "l":
-            gspeed = 10
-        elif input[i]  ==  "z":
-            gspeed = 100
-        elif input[i]  ==  "x":
-            gspeed = 10
-        elif input[i]  ==  "c":
-            gspeed = 5
-        elif input[i]  ==  "v":
-            gspeed = 5
-        elif input[i]  ==  "b":
-            gspeed = 5
-        elif input[i]  ==  "n":
-            gspeed = 5
-        elif input[i]  ==  "m":
-            gspeed = 100
-
-        if input[2] and input[3]:
-            gcol1 = colour(input[2] + input[3], False)
-
-        if input[4] and input[5]:
-            gcol2 = colour(input[4] + input[5], False)
-
-        if input[6] and input[7]:
-            gcol3 = colour(input[6] + input[7], False)
-
-        if input[8] and input[9]:
-            gcol4 = colour(input[8] + input[9], False)
-
-        if input[10] and input[11]:
-            gcol5 = colour(input[10] + input[11], False)
-
-        if gtype == False:
-            execPong(gspeed, gcol1, gcol2)
-        if gtype == True:
-            if execSnake(gspeed, gcol1, gcol2, gcol3, gcol4, gcol5): noError = True
-    except:
-        if not noError: raiseError("Error: Insufficient length. Please add more characters to the code.")
+    elif input[i]  ==  "t":
+        gspeed = 5
+    elif input[i]  ==  "y":
+        gspeed = 5
+    elif input[i]  ==  "u":
+        gspeed = 10
+    elif input[i]  ==  "i":
+        gspeed = 10
+    elif input[i]  ==  "o":
+        gspeed = 10
+    elif input[i]  ==  "p":
+        gspeed = 10
+    elif input[i]  ==  "a":
+        gspeed = 10
+    elif input[i]  ==  "s":
+        gspeed = 10
+    elif input[i]  ==  "d":
+        gspeed = 5
+    elif input[i]  ==  "f":
+        gspeed = 5
+    elif input[i]  ==  "g":
+        gspeed = 5
+    elif input[i]  ==  "h":
+        gspeed = 5
+    elif input[i]  ==  "j":
+        gspeed = 5
+    elif input[i]  ==  "k":
+        gspeed = 10
+    elif input[i]  ==  "l":
+        gspeed = 10
+    elif input[i]  ==  "z":
+        gspeed = 100
+    elif input[i]  ==  "x":
+        gspeed = 10
+    elif input[i]  ==  "c":
+        gspeed = 5
+    elif input[i]  ==  "v":
+        gspeed = 5
+    elif input[i]  ==  "b":
+        gspeed = 5
+    elif input[i]  ==  "n":
+        gspeed = 5
+    elif input[i]  ==  "m":
+        gspeed = 100
+    if input[2] and input[3]:
+        gcol1 = colour(input[2] + input[3], False)
+    if input[4] and input[5]:
+        gcol2 = colour(input[4] + input[5], False)
+    if input[6] and input[7]:
+        gcol3 = colour(input[6] + input[7], False)
+    if input[8] and input[9]:
+        gcol4 = colour(input[8] + input[9], False)
+    if input[10] and input[11]:
+        gcol5 = colour(input[10] + input[11], False)
+    if gtype == False:
+        execPong(gspeed, gcol1, gcol2)
+    if gtype == True:
+        execSnake(gspeed, gcol1, gcol2, gcol3, gcol4, gcol5)
 
 def execPong(speed, col1, col2):
     toExec = """
