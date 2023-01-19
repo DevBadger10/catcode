@@ -12,7 +12,7 @@ def main():
         print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
         # raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
     if mode == False:
-        game("1sdnuywdgyewuihnsxjksfef")
+        game("vgbghyjmfgcrtyfnhr567yjhre5467ytjhnr fbdrhty67uki98 54u87i9kkkkkkkkkkkkkkkkkkkkkk5")
     if mode == True:
         print()
     
@@ -220,6 +220,7 @@ def game(input):
     gcol3 = colour("hg", False)
     gcol4 = colour("hh", False)
     gcol5 = colour("yg", False)
+
     i = 0
     if input[i]  ==  "2":
         gtype = True
@@ -257,7 +258,9 @@ def game(input):
         gtype = True
     elif input[i]  ==  "m":
         gtype = True
+
     i = 1
+
     if input[i] == "1":
         gspeed = 50
     elif input[i]  ==  "2":
@@ -330,16 +333,22 @@ def game(input):
         gspeed = 5
     elif input[i]  ==  "m":
         gspeed = 100
+
     if input[2] and input[3]:
         gcol1 = colour(input[2] + input[3], False)
+    
     if input[4] and input[5]:
         gcol2 = colour(input[4] + input[5], False)
+    
     if input[6] and input[7]:
         gcol3 = colour(input[6] + input[7], False)
+    
     if input[8] and input[9]:
         gcol4 = colour(input[8] + input[9], False)
+    
     if input[10] and input[11]:
         gcol5 = colour(input[10] + input[11], False)
+
     if gtype == False:
         execPong(gspeed, gcol1, gcol2)
     if gtype == True:
@@ -357,6 +366,7 @@ pygame.init()
 class Paddle(pygame.sprite.Sprite):
     #This class represents a paddle. It derives from the "Sprite" class in Pygame.
     def __init__(self, color, width, height):
+        import pygame
         # Call the parent class (Sprite) constructor
         super().__init__()
         # Pass in the color of the Paddle, its width and height.
@@ -381,6 +391,7 @@ class Paddle(pygame.sprite.Sprite):
 class Ball(pygame.sprite.Sprite):
     #This class represents a ball. It derives from the "Sprite" class in Pygame.
     def __init__(self, color, width, height):
+        import pygame
         from random import randint
         # Call the parent class (Sprite) constructor
         super().__init__()
