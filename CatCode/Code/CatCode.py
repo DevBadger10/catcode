@@ -1,8 +1,6 @@
 import os
 import sys
 
-import pygame
-
 def main():
     os.chdir(os.path.dirname(sys.argv[0]))
 
@@ -574,7 +572,8 @@ change_to = direction
 score = 0
  
 # displaying Score function
-def show_score(choice, color, font, size):
+def show_score(choice, color, font, size, score, game_window):
+    import pygame
    
     # creating font object score_font
     score_font = pygame.font.SysFont(font, size)
@@ -592,6 +591,7 @@ def show_score(choice, color, font, size):
  
 # game over function
 def game_over():
+    import pygame
    
     # creating font object my_font
     my_font = pygame.font.SysFont('times new roman', 50)
@@ -624,7 +624,7 @@ def game_over():
  
 # Main Function
 while True:
-     
+    import pygame
     # handling key events
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
@@ -694,7 +694,7 @@ while True:
             game_over()
  
     # displaying score countinuously
-    show_score(1, white, 'times new roman', 20)
+    show_score(1, white, 'times new roman', 20, score, game_window)
  
     # Refresh game screen
     pygame.display.update()
