@@ -3,12 +3,15 @@ import pygame
 from random import * # This is created by https://www.101computing.net/pong-tutorial-using-pygame-adding-a-scoring-system/ I simply brought it into one file and made the speed customizeable.
 from random import randint
 import random
-
+pygame.init()
 speed = 10
 
 pygame.init()
 
 class Paddle(pygame.sprite.Sprite):
+    import pygame
+    from random import randint
+    import random
     #This class represents a paddle. It derives from the "Sprite" class in Pygame.
     def __init__(self, color, width, height):
         # Call the parent class (Sprite) constructor
@@ -34,6 +37,9 @@ class Paddle(pygame.sprite.Sprite):
         if self.rect.y > 400:
           self.rect.y = 400
 class Ball(pygame.sprite.Sprite):
+    import pygame
+    from random import randint
+    import random
     #This class represents a ball. It derives from the "Sprite" class in Pygame.
     def __init__(self, color, width, height):
         from random import randint
@@ -58,7 +64,7 @@ class Ball(pygame.sprite.Sprite):
         from random import randint
         self.velocity[0] = -self.velocity[0]
         self.velocity[1] = randint(-8,8)
-pygame.init()
+
 
 # Open a new window
 size = (700, 500)
@@ -97,11 +103,15 @@ scoreB = 0
 
 # -------- Main Program Loop -----------
 while carryOn:
+    import pygame
+    from random import * # Thi
+    from random import randint
+    import random
     # --- Main event loop
     for event in pygame.event.get(): # User did something
-        if event.type == pygame.QUIT: # If user clicked close
-              carryOn = False # Flag that we are done so we exit this loop
-        elif event.type==pygame.KEYDOWN:
+        #if event.type == pygame.QUIT: # If user clicked close
+        #      carryOn = False # Flag that we are done so we exit this loop
+        if event.type==pygame.KEYDOWN:
                 if event.key==pygame.K_x: #Pressing the x Key will quit the game
                      carryOn=False
 
