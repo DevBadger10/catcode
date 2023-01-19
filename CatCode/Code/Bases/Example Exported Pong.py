@@ -1,13 +1,10 @@
 # Import the pygame library and initialise the game engine
 import pygame
 from random import * # This is created by https://www.101computing.net/pong-tutorial-using-pygame-adding-a-scoring-system/ I simply brought it into one file and made the speed customizeable.
+from random import randint
+import random
 
-# col1 = [55,55,55]
-# col2 = [55,55,55]
-
-speed = 5
-# BLACK = (col1[0],col1[1],col1[2])
-# WHITE = (col2[0],col2[1],col2[2])
+speed = 10
 
 pygame.init()
 
@@ -19,8 +16,8 @@ class Paddle(pygame.sprite.Sprite):
         # Pass in the color of the Paddle, its width and height.
         # Set the background color and set it to be transparent
         self.image = pygame.Surface([width, height])
-        self.image.fill(pygame.Color(55,55,55))
-        self.image.set_colorkey(pygame.Color(55,55,55))
+        self.image.fill(pygame.Color(255,128,128))
+        self.image.set_colorkey(pygame.Color(255,128,128))
 
         # Draw the paddle (a rectangle!)
         pygame.draw.rect(self.image, color, [0, 0, width, height])
@@ -39,13 +36,14 @@ class Paddle(pygame.sprite.Sprite):
 class Ball(pygame.sprite.Sprite):
     #This class represents a ball. It derives from the "Sprite" class in Pygame.
     def __init__(self, color, width, height):
+        from random import randint
         # Call the parent class (Sprite) constructor
         super().__init__()
         # Pass in the color of the ball, its width and height.
         # Set the background color and set it to be transparent
         self.image = pygame.Surface([width, height])
-        self.image.fill(pygame.Color(55,55,55))
-        self.image.set_colorkey(pygame.Color(55,55,55))
+        self.image.fill(pygame.Color(255,128,128))
+        self.image.set_colorkey(pygame.Color(255,128,128))
 
         # Draw the ball (a rectangle!)
         pygame.draw.rect(self.image, color, [0, 0, width, height])
@@ -53,9 +51,11 @@ class Ball(pygame.sprite.Sprite):
         # Fetch the rectangle object that has the dimensions of the image.
         self.rect = self.image.get_rect()
     def update(self):
+        from random import randint
         self.rect.x += self.velocity[0]
         self.rect.y += self.velocity[1]
     def bounce(self):
+        from random import randint
         self.velocity[0] = -self.velocity[0]
         self.velocity[1] = randint(-8,8)
 pygame.init()
@@ -65,15 +65,15 @@ size = (700, 500)
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Pong")
 
-paddleA = Paddle(pygame.Color(55,55,55), 10, 100)
+paddleA = Paddle(pygame.Color(1,92,191), 10, 100)
 paddleA.rect.x = 20
 paddleA.rect.y = 200
 
-paddleB = Paddle(pygame.Color(55,55,55), 10, 100)
+paddleB = Paddle(pygame.Color(1,92,191), 10, 100)
 paddleB.rect.x = 670
 paddleB.rect.y = 200
 
-ball = Ball(pygame.Color(55,55,55),10,10)
+ball = Ball(pygame.Color(1,92,191),10,10)
 ball.rect.x = 345
 ball.rect.y = 195
 
@@ -135,17 +135,17 @@ while carryOn:
       ball.bounce()
     # --- Drawing code should go here
     # First, clear the screen to black.
-    screen.fill(pygame.Color(55,55,55))
+    screen.fill(pygame.Color(255,128,128))
     #Draw the net
-    pygame.draw.line(screen, pygame.Color(55,55,55), [349, 0], [349, 500], 5)
+    pygame.draw.line(screen, pygame.Color(1,92,191), [349, 0], [349, 500], 5)
     #Now let's draw all the sprites in one go. (For now we only have 2 sprites!)
     all_sprites_list.draw(screen)
 
     #Display scores:
     font = pygame.font.Font(None, 74)
-    text = font.render(str(scoreA), 1, pygame.Color(55,55,55))
+    text = font.render(str(scoreA), 1, pygame.Color(1,92,191))
     screen.blit(text, (250,10))
-    text = font.render(str(scoreB), 1, pygame.Color(55,55,55))
+    text = font.render(str(scoreB), 1, pygame.Color(1,92,191))
     screen.blit(text, (420,10))
 
     # --- Go ahead and update the screen with what we've drawn.

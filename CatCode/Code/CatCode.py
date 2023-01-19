@@ -518,10 +518,9 @@ while carryOn:
 #Once we have exited the main program loop we can stop the game engine:
 pygame.quit()"""
 
-    # print(toExec)
+    print(toExec)
     print("Game starting...")
     exec(toExec)
-    
 
 def execSnake(speed, col1, col2, col3, col4, col5):
     toExec = """
