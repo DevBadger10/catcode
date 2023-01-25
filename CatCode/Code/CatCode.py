@@ -14,13 +14,17 @@ def main():
         print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
         # raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
     if mode == False:
-        turtle("zqtrg5dynmnbby tv8nmhjnnh54 ghh iu b4ft")
+        turtle("thequickbrowndogjumpsoverthespeedylazyfox")
+        pass
     if mode == True:
         print()
     
 def raiseError(error):
     print("\033[91m    {}\033[00m".format(error))
     sys.exit()
+
+def clamp(n, minn, maxn):
+    return max(min(maxn, n), minn)
 
 # Define command line arguments.
 
@@ -42,7 +46,7 @@ try:
 except:
     print("\033[93m    {}\033[00m".format("Warning: Catec is undefined. Default to 0."))
 
-def number(input):
+def number(input, prnt):
     output = 0
 
     length = len(input) # Wait, so let me get this straight; passing range() len(input) leads to only one iteration, but feeding it a variable equivelant to len(input) works? *internal development screaming*
@@ -53,7 +57,7 @@ def number(input):
     #     print(n)
     # print("123457890"[5])
     for i in range(0, length):
-        print(str(output))
+        if prnt: print(str(output))
         if input[i] == "1":
             output += 1
         elif input[i]  ==  "2":
@@ -136,25 +140,27 @@ def number(input):
           if not input[i] == 0:
               output /= 3
         # print(str(i))
-    print(str(output))
-    return("\n\rFinal number: " + str(output))
+    if prnt: print(str(output))
+    if prnt: return("\n\rFinal number: " + str(output))
+    else: return(output)
 
 def turtle(input):
     output = turt.Turtle()
     lenput = len(input) # Why does it have to work like this...
-    for i in len(input):
+
+    for i in range(lenput):
         if input[i] == "1":
-            output.goto(number(input[i]), number(input[i]))
-            i += 1
+            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            i += 3
         elif input[i]  ==  "2":
             output.up()
         elif input[i]  ==  "3":
-            output.up()
+            output.down()
         elif input[i]  ==  "4":
             print()
         elif input[i]  ==  "5":
-            output.goto(number(input[i]), number(input[i]))
-            i += 1
+            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            i += 3
         elif input[i]  ==  "6":
             output.down()
         elif input[i]  ==  "7":
@@ -162,17 +168,17 @@ def turtle(input):
         elif input[i]  ==  "8":
             print()
         elif input[i]  ==  "9":
-            output.goto(number(input[i]), number(input[i]))
-            i += 1
+            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            i += 3
         elif input[i]  ==  "0":
             output.down()
         elif input[i]  ==  "q":
-            output.up()
+            output.down()
         elif input[i]  ==  "w":
             print()
         elif input[i]  ==  "e":
-            output.goto(number(input[i]), number(input[i]))
-            i += 1
+            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            i += 3
         elif input[i]  ==  "r":
             output.down()
         elif input[i]  ==  "t":
@@ -180,26 +186,26 @@ def turtle(input):
         elif input[i]  ==  "y":
             print()
         elif input[i]  ==  "u":
-            output.goto(number(input[i]), number(input[i]))
-            i += 1
+            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            i += 3
         elif input[i]  ==  "i":
             output.down()
         elif input[i]  ==  "o":
-            output.up()
+            output.down()
         elif input[i]  ==  "p":
             print()
         elif input[i]  ==  "a":
-            output.goto(number(input[i]), number(input[i]))
-            i += 1
+            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            i += 3
         elif input[i]  ==  "s":
-            output.up()
+            output.down()
         elif input[i]  ==  "d":
             output.down()
         elif input[i]  ==  "f":
             print()
         elif input[i]  ==  "g":
-            output.goto(number(input[i]), number(input[i]))
-            i += 1
+            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            i += 3
         elif input[i]  ==  "h":
             output.down()
         elif input[i]  ==  "j":
@@ -207,19 +213,19 @@ def turtle(input):
         elif input[i]  ==  "k":
             print()
         elif input[i]  ==  "l":
-            output.goto(number(input[i]), number(input[i]))
-            i += 1
+            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            i += 3
         elif input[i]  ==  "z":
-            output.up()
+            output.down()
         elif input[i]  ==  "x":
             output.down()
         elif input[i]  ==  "c":
             print()
         elif input[i]  ==  "v":
-            output.goto(number(input[i]), number(input[i]))
-            i += 1
+            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            i += 3
         elif input[i]  ==  "b":
-            output.up()
+            output.down()
         elif input[i]  ==  "n":
             output.up()
         elif input[i]  ==  "m":
