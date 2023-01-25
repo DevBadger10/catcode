@@ -24,7 +24,7 @@ def raiseError(error):
     sys.exit()
 
 def clamp(n, minn, maxn):
-    return max(min(maxn, n), minn)
+    return max(min(maxn, n), minn) + 500
 
 # Define command line arguments.
 
@@ -146,11 +146,16 @@ def number(input, prnt):
 
 def turtle(input):
     output = turt.Turtle()
+    output.penup()
     lenput = len(input) # Why does it have to work like this...
+    output.hideturtle()
+    output.pensize(15)
+    output.speed(3)
+    output.pendown()
 
     for i in range(lenput):
         if input[i] == "1":
-            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            output.goto(int(clamp(number(input[i] + input[i + 1], False), -500, 500)), int(clamp(number(input[i + 2] + input[i +3], False), -500, 500)))
             i += 3
         elif input[i]  ==  "2":
             output.up()
@@ -159,7 +164,7 @@ def turtle(input):
         elif input[i]  ==  "4":
             print()
         elif input[i]  ==  "5":
-            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            output.goto(int(clamp(number(input[i] + input[i + 1], False), -500, 500)), int(clamp(number(input[i + 2] + input[i +3], False), -500, 500)))
             i += 3
         elif input[i]  ==  "6":
             output.down()
@@ -168,7 +173,7 @@ def turtle(input):
         elif input[i]  ==  "8":
             print()
         elif input[i]  ==  "9":
-            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            output.goto(int(clamp(number(input[i] + input[i + 1], False), -500, 500)), int(clamp(number(input[i + 2] + input[i +3], False), -500, 500)))
             i += 3
         elif input[i]  ==  "0":
             output.down()
@@ -177,7 +182,7 @@ def turtle(input):
         elif input[i]  ==  "w":
             print()
         elif input[i]  ==  "e":
-            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            output.goto(int(clamp(number(input[i] + input[i + 1], False), -500, 500)), int(clamp(number(input[i + 2] + input[i +3], False), -500, 500)))
             i += 3
         elif input[i]  ==  "r":
             output.down()
@@ -186,7 +191,7 @@ def turtle(input):
         elif input[i]  ==  "y":
             print()
         elif input[i]  ==  "u":
-            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            output.goto(int(clamp(number(input[i] + input[i + 1], False), -500, 500)), int(clamp(number(input[i + 2] + input[i +3], False), -500, 500)))
             i += 3
         elif input[i]  ==  "i":
             output.down()
@@ -195,7 +200,7 @@ def turtle(input):
         elif input[i]  ==  "p":
             print()
         elif input[i]  ==  "a":
-            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            output.goto(int(clamp(number(input[i] + input[i + 1], False), -500, 500)), int(clamp(number(input[i + 2] + input[i +3], False), -500, 500)))
             i += 3
         elif input[i]  ==  "s":
             output.down()
@@ -204,7 +209,7 @@ def turtle(input):
         elif input[i]  ==  "f":
             print()
         elif input[i]  ==  "g":
-            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            output.goto(int(clamp(number(input[i] + input[i + 1], False), -500, 500)), int(clamp(number(input[i + 2] + input[i +3], False), -500, 500)))
             i += 3
         elif input[i]  ==  "h":
             output.down()
@@ -213,7 +218,7 @@ def turtle(input):
         elif input[i]  ==  "k":
             print()
         elif input[i]  ==  "l":
-            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            output.goto(int(clamp(number(input[i] + input[i + 1], False), -500, 500)), int(clamp(number(input[i + 2] + input[i +3], False), -500, 500)))
             i += 3
         elif input[i]  ==  "z":
             output.down()
@@ -222,7 +227,7 @@ def turtle(input):
         elif input[i]  ==  "c":
             print()
         elif input[i]  ==  "v":
-            output.goto(int(number(input[i] + input[i + 1], False)), int(number(input[i + 2] + input[i +3], False)))
+            output.goto(int(clamp(number(input[i] + input[i + 1], False), -500, 500)), int(clamp(number(input[i + 2] + input[i +3], False), -500, 500)))
             i += 3
         elif input[i]  ==  "b":
             output.down()
@@ -230,6 +235,7 @@ def turtle(input):
             output.up()
         elif input[i]  ==  "m":
             print()
+    output.pensize(15)
 
 def game(input):
     gtype = False
