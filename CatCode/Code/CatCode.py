@@ -1,6 +1,8 @@
 import os
 import sys
 
+import turtle as turt
+
 def main():
     os.chdir(os.path.dirname(sys.argv[0]))
 
@@ -12,7 +14,7 @@ def main():
         print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
         # raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
     if mode == False:
-        game("zhdfu8irhhsdguicdxhruohggbghyjmfgcrtyfnhr567yjhre5467ytjhnr fbdrhty67uki98 54u87i9kkkkkkkkkkkkkkkkkkkkkk5")
+        turtle("zqtrg5dynmnbby tv8nmhjnnh54 ghh iu b4ft")
     if mode == True:
         print()
     
@@ -138,77 +140,88 @@ def number(input):
     return("\n\rFinal number: " + str(output))
 
 def turtle(input):
+    output = turt.Turtle()
+    lenput = len(input) # Why does it have to work like this...
     for i in len(input):
         if input[i] == "1":
-            print()
+            output.goto(number(input[i]), number(input[i]))
+            i += 1
         elif input[i]  ==  "2":
-            print()
+            output.up()
         elif input[i]  ==  "3":
-            print()
+            output.up()
         elif input[i]  ==  "4":
             print()
         elif input[i]  ==  "5":
-            print()
+            output.goto(number(input[i]), number(input[i]))
+            i += 1
         elif input[i]  ==  "6":
-            print()
+            output.down()
         elif input[i]  ==  "7":
-            print()
+            output.down()
         elif input[i]  ==  "8":
             print()
         elif input[i]  ==  "9":
-            print()
+            output.goto(number(input[i]), number(input[i]))
+            i += 1
         elif input[i]  ==  "0":
-            print()
+            output.down()
         elif input[i]  ==  "q":
-            print()
+            output.up()
         elif input[i]  ==  "w":
             print()
         elif input[i]  ==  "e":
-            print()
+            output.goto(number(input[i]), number(input[i]))
+            i += 1
         elif input[i]  ==  "r":
-            print()
+            output.down()
         elif input[i]  ==  "t":
-            print()
+            output.down()
         elif input[i]  ==  "y":
             print()
         elif input[i]  ==  "u":
-            print()
+            output.goto(number(input[i]), number(input[i]))
+            i += 1
         elif input[i]  ==  "i":
-            print()
+            output.down()
         elif input[i]  ==  "o":
-            print()
+            output.up()
         elif input[i]  ==  "p":
             print()
         elif input[i]  ==  "a":
-            print()
+            output.goto(number(input[i]), number(input[i]))
+            i += 1
         elif input[i]  ==  "s":
-            print()
+            output.up()
         elif input[i]  ==  "d":
-            print()
+            output.down()
         elif input[i]  ==  "f":
             print()
         elif input[i]  ==  "g":
-            print()
+            output.goto(number(input[i]), number(input[i]))
+            i += 1
         elif input[i]  ==  "h":
-            print()
+            output.down()
         elif input[i]  ==  "j":
-            print()
+            output.down()
         elif input[i]  ==  "k":
             print()
         elif input[i]  ==  "l":
-            print()
+            output.goto(number(input[i]), number(input[i]))
+            i += 1
         elif input[i]  ==  "z":
-            print()
+            output.up()
         elif input[i]  ==  "x":
-            print()
+            output.down()
         elif input[i]  ==  "c":
             print()
         elif input[i]  ==  "v":
-            print()
+            output.goto(number(input[i]), number(input[i]))
+            i += 1
         elif input[i]  ==  "b":
-            print()
+            output.up()
         elif input[i]  ==  "n":
-            print()
+            output.up()
         elif input[i]  ==  "m":
             print()
 

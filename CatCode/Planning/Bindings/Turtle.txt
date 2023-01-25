@@ -3,32 +3,32 @@
 3: Pen Up
 4: Change colour [Two Digit Colour (Abstract)]
 5: Coords [Two Digit Number]
-6: Pen Up
-7: Pen Up
+6: Pen Down
+7: Pen Down
 8: Change colour [Two Digit Colour (Abstract)]
 9: Coords [Two Digit Number]
-0: Pen Up
+0: Pen Down
 q: Pen Up
 w: Change colour [Two Digit Colour (Abstract)]
 e: Coords [Two Digit Number]
-r: Pen Up
-t: Pen Up
+r: Pen Down
+t: Pen Down
 y: Change colour [Two Digit Colour (Abstract)]
 u: Coords [Two Digit Number]
-i: Pen Up
-o: Pen down
+i: Pen Down
+o: Pen Up
 p: Change colour [Two Digit Colour (Abstract)]
 a: Coords [Two Digit Number]
 s: Pen Up
-d: Pen down
+d: Pen Down
 f: Change colour [Two Digit Colour (Abstract)]
 g: Coords [Two Digit Number]
-h: Pen Up
-j: Pen down
+h: Pen Down
+j: Pen Down
 k: Change colour [Two Digit Colour (Abstract)]
 l: Coords [Two Digit Number]
 z: Pen Up
-x: Pen down
+x: Pen Down
 c: Change colour [Two Digit Colour (Abstract)]
 v: Coords [Two Digit Number]
 b: Pen Up
