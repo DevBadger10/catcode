@@ -155,99 +155,97 @@ def turtle(input):
     output.pendown()
 
     while True:
-        if not output == 0:
-            for i in range(lenput):
-                if input[i] == "1":
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                elif input[i]  ==  "2":
-                    output.up()
-                elif input[i]  ==  "3":
-                    output.down()
-                elif input[i]  ==  "4":
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                elif input[i]  ==  "5":
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                elif input[i]  ==  "6":
-                    output.down()
-                elif input[i]  ==  "7":
-                    output.down()
-                elif input[i]  ==  "8":
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                elif input[i]  ==  "9":
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                elif input[i]  ==  "0":
-                    output.down()
-                elif input[i]  ==  "q":
-                    output.down()
-                elif input[i]  ==  "w":
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                elif input[i]  ==  "e":
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                elif input[i]  ==  "r":
-                    output.down()
-                elif input[i]  ==  "t":
-                    output.down()
-                elif input[i]  ==  "y":
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                elif input[i]  ==  "u":
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                elif input[i]  ==  "i":
-                    output.down()
-                elif input[i]  ==  "o":
-                    output.down()
-                elif input[i]  ==  "p":
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                elif input[i]  ==  "a":
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                elif input[i]  ==  "s":
-                    output.down()
-                elif input[i]  ==  "d":
-                    output.down()
-                elif input[i]  ==  "f":
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                elif input[i]  ==  "g":
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                elif input[i]  ==  "h":
-                    output.down()
-                elif input[i]  ==  "j":
-                    output.down()
-                elif input[i]  ==  "k":
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                elif input[i]  ==  "l":
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                elif input[i]  ==  "z":
-                    output.down()
-                elif input[i]  ==  "x":
-                    output.down()
-                elif input[i]  ==  "c":
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                elif input[i]  ==  "v":
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                elif input[i]  ==  "b":
-                    output.down()
-                elif input[i]  ==  "n":
-                    output.up()
-                elif input[i]  ==  "m":
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-        output = 0
+        for i in range(lenput):
+            if input[i] == "1":
+                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                i += 3
+            elif input[i]  ==  "2":
+                output.up()
+            elif input[i]  ==  "3":
+                output.down()
+            elif input[i]  ==  "4":
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
+                i += 1
+            elif input[i]  ==  "5":
+                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                i += 3
+            elif input[i]  ==  "6":
+                output.down()
+            elif input[i]  ==  "7":
+                output.down()
+            elif input[i]  ==  "8":
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
+                i += 1
+            elif input[i]  ==  "9":
+                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                i += 3
+            elif input[i]  ==  "0":
+                output.down()
+            elif input[i]  ==  "q":
+                output.down()
+            elif input[i]  ==  "w":
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
+                i += 1
+            elif input[i]  ==  "e":
+                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                i += 3
+            elif input[i]  ==  "r":
+                output.down()
+            elif input[i]  ==  "t":
+                output.down()
+            elif input[i]  ==  "y":
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
+                i += 1
+            elif input[i]  ==  "u":
+                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                i += 3
+            elif input[i]  ==  "i":
+                output.down()
+            elif input[i]  ==  "o":
+                output.down()
+            elif input[i]  ==  "p":
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
+                i += 1
+            elif input[i]  ==  "a":
+                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                i += 3
+            elif input[i]  ==  "s":
+                output.down()
+            elif input[i]  ==  "d":
+                output.down()
+            elif input[i]  ==  "f":
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
+                i += 1
+            elif input[i]  ==  "g":
+                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                i += 3
+            elif input[i]  ==  "h":
+                output.down()
+            elif input[i]  ==  "j":
+                output.down()
+            elif input[i]  ==  "k":
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
+                i += 1
+            elif input[i]  ==  "l":
+                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                i += 3
+            elif input[i]  ==  "z":
+                output.down()
+            elif input[i]  ==  "x":
+                output.down()
+            elif input[i]  ==  "c":
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
+                i += 1
+            elif input[i]  ==  "v":
+                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                i += 3
+            elif input[i]  ==  "b":
+                output.down()
+            elif input[i]  ==  "n":
+                output.up()
+            elif input[i]  ==  "m":
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
+                i += 1
 
 def game(input):
     gtype = False
