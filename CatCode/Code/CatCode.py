@@ -151,6 +151,7 @@ def turtle(input):
     output.hideturtle()
     output.pensize(15)
     output.speed(3)
+    output.colormode(255)
     output.pendown()
 
     while True:
