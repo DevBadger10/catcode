@@ -12,7 +12,7 @@ def main():
         print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
         # raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
     if mode == False:
-        game("vgbghyjmfgcrtyfnhr567yjhre5467ytjhnr fbdrhty67uki98 54u87i9kkkkkkkkkkkkkkkkkkkkkk5")
+        game("zhdfu8irhhsdguicdxhruohggbghyjmfgcrtyfnhr567yjhre5467ytjhnr fbdrhty67uki98 54u87i9kkkkkkkkkkkkkkkkkkkkkk5")
     if mode == True:
         print()
     
@@ -682,7 +682,7 @@ while True:
     # Touching the snake body
     for block in snake_body[1:]:
         if snake_position[0] == block[0] and snake_position[1] == block[1]:
-            game_over()
+            game_over(score, game_window)
  
     # displaying score countinuously
     show_score(1, white, 'times new roman', 20, score, game_window)
