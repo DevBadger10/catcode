@@ -14,7 +14,7 @@ def main():
         print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
         # raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
     if mode == False:
-        turtle("thequickbrowndogjumpsoverthespeedylazyfox")
+        turtle("fantastic")
         pass
     if mode == True:
         print()
