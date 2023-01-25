@@ -163,7 +163,8 @@ def turtle(input):
             elif input[i]  ==  "3":
                 output.down()
             elif input[i]  ==  "4":
-                print()
+                output.color(colour(input[i] + input[i + 1], False, True))
+                i += 1
             elif input[i]  ==  "5":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
                 i += 3
@@ -172,7 +173,8 @@ def turtle(input):
             elif input[i]  ==  "7":
                 output.down()
             elif input[i]  ==  "8":
-                print()
+                output.color(colour(input[i] + input[i + 1], False))
+                i += 1
             elif input[i]  ==  "9":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
                 i += 3
@@ -181,7 +183,8 @@ def turtle(input):
             elif input[i]  ==  "q":
                 output.down()
             elif input[i]  ==  "w":
-                print()
+                output.color(colour(input[i] + input[i + 1], False))
+                i += 1
             elif input[i]  ==  "e":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
                 i += 3
@@ -190,7 +193,8 @@ def turtle(input):
             elif input[i]  ==  "t":
                 output.down()
             elif input[i]  ==  "y":
-                print()
+                output.color(colour(input[i] + input[i + 1], False))
+                i += 1
             elif input[i]  ==  "u":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
                 i += 3
@@ -199,7 +203,8 @@ def turtle(input):
             elif input[i]  ==  "o":
                 output.down()
             elif input[i]  ==  "p":
-                print()
+                output.color(colour(input[i] + input[i + 1], False))
+                i += 1
             elif input[i]  ==  "a":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
                 i += 3
@@ -208,7 +213,8 @@ def turtle(input):
             elif input[i]  ==  "d":
                 output.down()
             elif input[i]  ==  "f":
-                print()
+                output.color(colour(input[i] + input[i + 1], False))
+                i += 1
             elif input[i]  ==  "g":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
                 i += 3
@@ -217,7 +223,8 @@ def turtle(input):
             elif input[i]  ==  "j":
                 output.down()
             elif input[i]  ==  "k":
-                print()
+                output.color(colour(input[i] + input[i + 1], False))
+                i += 1
             elif input[i]  ==  "l":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
                 i += 3
@@ -226,7 +233,8 @@ def turtle(input):
             elif input[i]  ==  "x":
                 output.down()
             elif input[i]  ==  "c":
-                print()
+                output.color(colour(input[i] + input[i + 1], False))
+                i += 1
             elif input[i]  ==  "v":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
                 i += 3
@@ -235,7 +243,8 @@ def turtle(input):
             elif input[i]  ==  "n":
                 output.up()
             elif input[i]  ==  "m":
-                print()
+                output.color(colour(input[i] + input[i + 1], False))
+                i += 1
 
 def game(input):
     gtype = False
@@ -723,7 +732,7 @@ while True:
     exec(toExec)
     return(True)
 
-def colour(input, prnt):
+def colour(input, prnt, type=False):
     output = s_colour(input[0])
     length = len(input)
     for i in range(0, length - 1):
@@ -802,7 +811,9 @@ def colour(input, prnt):
             output = l_colour(output, [255, 78, 113]) 
     if prnt: print("RGB value: " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
     if prnt: return("\n\rFinal Answer (RGB Value): " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
-    elif not prnt: return(output)
+    elif not prnt: 
+        if not type: return(output)
+        if type: return(tuple(output))
 
 def l_colour(initial, goal): # Lerp Colour
     work0 = initial[0] + goal [0]
