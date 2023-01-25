@@ -163,7 +163,7 @@ def turtle(input):
             elif input[i]  ==  "3":
                 output.down()
             elif input[i]  ==  "4":
-                output.color(colour(input[i] + input[i + 1], False, True))
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
                 i += 1
             elif input[i]  ==  "5":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
@@ -173,7 +173,7 @@ def turtle(input):
             elif input[i]  ==  "7":
                 output.down()
             elif input[i]  ==  "8":
-                output.color(colour(input[i] + input[i + 1], False, True))
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
                 i += 1
             elif input[i]  ==  "9":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
@@ -183,7 +183,7 @@ def turtle(input):
             elif input[i]  ==  "q":
                 output.down()
             elif input[i]  ==  "w":
-                output.color(colour(input[i] + input[i + 1], False, True))
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
                 i += 1
             elif input[i]  ==  "e":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
@@ -193,7 +193,7 @@ def turtle(input):
             elif input[i]  ==  "t":
                 output.down()
             elif input[i]  ==  "y":
-                output.color(colour(input[i] + input[i + 1], False, True))
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
                 i += 1
             elif input[i]  ==  "u":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
@@ -203,7 +203,7 @@ def turtle(input):
             elif input[i]  ==  "o":
                 output.down()
             elif input[i]  ==  "p":
-                output.color(colour(input[i] + input[i + 1], False, True))
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
                 i += 1
             elif input[i]  ==  "a":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
@@ -213,7 +213,7 @@ def turtle(input):
             elif input[i]  ==  "d":
                 output.down()
             elif input[i]  ==  "f":
-                output.color(colour(input[i] + input[i + 1], False, True))
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
                 i += 1
             elif input[i]  ==  "g":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
@@ -223,7 +223,7 @@ def turtle(input):
             elif input[i]  ==  "j":
                 output.down()
             elif input[i]  ==  "k":
-                output.color(colour(input[i] + input[i + 1], False, True))
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
                 i += 1
             elif input[i]  ==  "l":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
@@ -233,7 +233,7 @@ def turtle(input):
             elif input[i]  ==  "x":
                 output.down()
             elif input[i]  ==  "c":
-                output.color(colour(input[i] + input[i + 1], False, True))
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
                 i += 1
             elif input[i]  ==  "v":
                 output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
@@ -243,7 +243,7 @@ def turtle(input):
             elif input[i]  ==  "n":
                 output.up()
             elif input[i]  ==  "m":
-                output.color(colour(input[i] + input[i + 1], False, True))
+                output.pencolor(colour(input[i] + input[i + 1], False, True))
                 i += 1
 
 def game(input):
