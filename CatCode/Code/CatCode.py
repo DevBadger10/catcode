@@ -155,7 +155,7 @@ def turtle(input):
     output.pendown()
 
     while True:
-        if not output = 0:
+        if not output == 0:
             for i in range(lenput):
                 if input[i] == "1":
                     output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
