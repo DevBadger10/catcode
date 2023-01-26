@@ -1,0 +1,25 @@
+{
+  "name": "catcode-syntaxer",
+  "displayName": "CatCode Syntaxer",
+  "description": "Adds the CatCode esolang syntax to VS Code. The syntax doesn't work that well, though.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "catcode",
+      "aliases": ["CatCode", "catcode"],
+      "extensions": [".cc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "catcode",
+      "scopeName": "source.catcode",
+      "path": "./syntaxes/catcode.tmLanguage.json"
+    }]
+  }
+}
