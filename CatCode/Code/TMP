@@ -1,16 +1,11 @@
-import os 
-
-import sys 
-
-import turtle as turt 
-code = "drsdfewsfdgrg" 
-
-catec = 0
-
-
+import os
+import sys
+import turtle as turt
+code = "drsdfewsfdgrg"
+catec = 0
+
 
 def main():
-    print("MAINJ")
     if catec == 0:
         print(number(code, True))
     elif catec == 1:
@@ -119,7 +114,7 @@ def number(input, prnt):
               output /= 3
         # print(str(i))
     if prnt: print(str(output))
-    if prnt: return("Final number: " + str(output))
+    if prnt: return("\n\rFinal number: " + str(output))
     else: return(output)
 
 def turtle(input):
@@ -972,7 +967,8 @@ def colour(input, prnt, type=False):
         elif input[i + 1]  ==  "m":
             output = l_colour(output, [255, 78, 113]) 
     if prnt: print("RGB value: " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
-    if prnt: return("Final Answer (RGB Value): " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
+    if prnt: return("
+Final Answer (RGB Value): " + str(output[0]) + ", " + str(output[1]) + ", " + str(output[2]))
     elif not prnt: 
         if not type: return(output)
         if type: return(tuple(output))
