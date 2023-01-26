@@ -2,8 +2,8 @@ import os
 import sys
 import turtle as turt
 import pygame
-code = "frsdfewsfdgrg"
-catec = 2
+code = "drsdfewsfdgrg"
+catec = 1
 
 
 def main():
