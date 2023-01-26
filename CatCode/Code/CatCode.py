@@ -24,7 +24,10 @@ def raiseError(error):
     sys.exit()
 
 def clamp(n, minn, maxn):
-    return max(min(maxn, n), minn)
+    if n < minn:
+        return minn
+    elif n > maxn:
+        return maxn
 
 # Define command line arguments.
 
