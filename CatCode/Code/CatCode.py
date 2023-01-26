@@ -177,7 +177,7 @@ def turtle(input):
                             try:
                                 output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
                             except:
-                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
+                                raiseError("Cheese.")
             elif input[i]  ==  "2":
                 output.up()
             elif input[i]  ==  "3":
@@ -207,7 +207,7 @@ def turtle(input):
                             try:
                                 output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
                             except:
-                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
+                                raiseError("Cheese.")
             elif input[i]  ==  "6":
                 output.down()
             elif input[i]  ==  "7":
@@ -237,7 +237,7 @@ def turtle(input):
                             try:
                                 output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
                             except:
-                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
+                                raiseError("    Cheese.")
             elif input[i]  ==  "0":
                 output.down()
             elif input[i]  ==  "q":
@@ -267,7 +267,7 @@ def turtle(input):
                             try:
                                 output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
                             except:
-                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
+                                raiseError("    Cheese.")
             elif input[i]  ==  "r":
                 output.down()
             elif input[i]  ==  "t":
@@ -297,7 +297,7 @@ def turtle(input):
                             try:
                                 output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
                             except:
-                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
+                                raiseError("Cheese.")
             elif input[i]  ==  "i":
                 output.down()
             elif input[i]  ==  "o":
@@ -327,7 +327,7 @@ def turtle(input):
                             try:
                                 output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
                             except:
-                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
+                                raiseError("    Cheese.")
             elif input[i]  ==  "s":
                 output.down()
             elif input[i]  ==  "d":
@@ -357,7 +357,7 @@ def turtle(input):
                             try:
                                 output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
                             except:
-                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
+                                raiseError("Cheese.")
             elif input[i]  ==  "h":
                 output.down()
             elif input[i]  ==  "j":
@@ -387,7 +387,7 @@ def turtle(input):
                             try:
                                 output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
                             except:
-                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
+                                raiseError("Cheese.")
             elif input[i]  ==  "z":
                 output.down()
             elif input[i]  ==  "x":
@@ -417,7 +417,7 @@ def turtle(input):
                             try:
                                 output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
                             except:
-                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
+                                raiseError("    Cheese.")
             elif input[i]  ==  "b":
                 output.down()
             elif input[i]  ==  "n":
