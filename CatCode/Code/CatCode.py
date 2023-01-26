@@ -14,7 +14,7 @@ def main():
         print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
         # raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
     if mode == False:
-        turtle("great") # Seems  to be accessing an out of range thing in it.AGAIN.
+        turtle("meh") # Seems  to be accessing an out of range thing in it.AGAIN.
         pass
     if mode == True:
         print()
@@ -162,8 +162,22 @@ def turtle(input):
     while True:
         for i in range(lenput):
             if input[i] == "1":
-                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                i += 3
+                try:
+                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                    i += 3
+                except:
+                    try:
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                        i += 2
+                    except:
+                        try:
+                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                            i += 1
+                        except:
+                            try:
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                            except:
+                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
             elif input[i]  ==  "2":
                 output.up()
             elif input[i]  ==  "3":
@@ -178,8 +192,22 @@ def turtle(input):
                     except:
                         output.pencolor(colour("g", False, True))
             elif input[i]  ==  "5":
-                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                i += 3
+                try:
+                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                    i += 3
+                except:
+                    try:
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                        i += 2
+                    except:
+                        try:
+                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                            i += 1
+                        except:
+                            try:
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                            except:
+                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
             elif input[i]  ==  "6":
                 output.down()
             elif input[i]  ==  "7":
@@ -194,8 +222,22 @@ def turtle(input):
                     except:
                         output.pencolor(colour("g", False, True))
             elif input[i]  ==  "9":
-                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                i += 3
+                try:
+                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                    i += 3
+                except:
+                    try:
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                        i += 2
+                    except:
+                        try:
+                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                            i += 1
+                        except:
+                            try:
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                            except:
+                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
             elif input[i]  ==  "0":
                 output.down()
             elif input[i]  ==  "q":
@@ -210,8 +252,22 @@ def turtle(input):
                     except:
                         output.pencolor(colour("g", False, True))
             elif input[i]  ==  "e":
-                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                i += 3
+                try:
+                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                    i += 3
+                except:
+                    try:
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                        i += 2
+                    except:
+                        try:
+                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                            i += 1
+                        except:
+                            try:
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                            except:
+                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
             elif input[i]  ==  "r":
                 output.down()
             elif input[i]  ==  "t":
@@ -226,8 +282,22 @@ def turtle(input):
                     except:
                         output.pencolor(colour("g", False, True))
             elif input[i]  ==  "u":
-                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                i += 3
+                try:
+                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                    i += 3
+                except:
+                    try:
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                        i += 2
+                    except:
+                        try:
+                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                            i += 1
+                        except:
+                            try:
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                            except:
+                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
             elif input[i]  ==  "i":
                 output.down()
             elif input[i]  ==  "o":
@@ -242,8 +312,22 @@ def turtle(input):
                     except:
                         output.pencolor(colour("g", False, True))
             elif input[i]  ==  "a":
-                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                i += 3
+                try:
+                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                    i += 3
+                except:
+                    try:
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                        i += 2
+                    except:
+                        try:
+                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                            i += 1
+                        except:
+                            try:
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                            except:
+                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
             elif input[i]  ==  "s":
                 output.down()
             elif input[i]  ==  "d":
@@ -258,8 +342,22 @@ def turtle(input):
                     except:
                         output.pencolor(colour("g", False, True))
             elif input[i]  ==  "g":
-                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                i += 3
+                try:
+                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                    i += 3
+                except:
+                    try:
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                        i += 2
+                    except:
+                        try:
+                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                            i += 1
+                        except:
+                            try:
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                            except:
+                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
             elif input[i]  ==  "h":
                 output.down()
             elif input[i]  ==  "j":
@@ -274,8 +372,22 @@ def turtle(input):
                     except:
                         output.pencolor(colour("g", False, True))
             elif input[i]  ==  "l":
-                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                i += 3
+                try:
+                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                    i += 3
+                except:
+                    try:
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                        i += 2
+                    except:
+                        try:
+                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                            i += 1
+                        except:
+                            try:
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                            except:
+                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
             elif input[i]  ==  "z":
                 output.down()
             elif input[i]  ==  "x":
@@ -290,8 +402,22 @@ def turtle(input):
                     except:
                         output.pencolor(colour("g", False, True))
             elif input[i]  ==  "v":
-                output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                i += 3
+                try:
+                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                    i += 3
+                except:
+                    try:
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                        i += 2
+                    except:
+                        try:
+                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                            i += 1
+                        except:
+                            try:
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                            except:
+                                raiseError("I have no idea how you got this error to be raised, but something must be EXTREMELY faffed up in your code. Like, serious faffage. Reach out through GitHub issues and we'll fix this.")
             elif input[i]  ==  "b":
                 output.down()
             elif input[i]  ==  "n":
