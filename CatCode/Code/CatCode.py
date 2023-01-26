@@ -1,6 +1,6 @@
 import os
 import sys
-import subprocess
+import PyInstaller.__main__
 
 import turtle as turt
 
@@ -1107,7 +1107,7 @@ main()
         elif catec == 1:
             turtle(code)
         elif catec == 2:
-            game(code)
+            game(code)  
         elif catec == 3:
             print(colour(code, True)) 
         else:
@@ -1118,7 +1118,11 @@ main()
         export.writelines(toexport)
         export.close()
 
-        subprocess.run("pyinstaller TMP")
+        PyInstaller.__main__.run([
+            'TMP',
+            '--onefile',
+            '--windowed'
+        ])
 
 
     

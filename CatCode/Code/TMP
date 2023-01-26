@@ -2,7 +2,7 @@ import os
 import sys
 import turtle as turt
 code = "drsdfewsfdgrg"
-catec = 2
+catec = 0
 
 
 def main():
