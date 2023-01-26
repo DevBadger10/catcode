@@ -44,7 +44,7 @@ def main():
         elif catec == 2:
             game(code)
         elif catec == 3:
-            print(colour(code, True))
+            print(colour(code, True)) 
         else:
             raiseError("Error: Catec is undefined.")
     if mode == True:
