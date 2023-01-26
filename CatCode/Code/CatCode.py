@@ -3,24 +3,42 @@ import sys
 
 import turtle as turt
 
-# Define command line arguments.
-
-
-
 def main():
     os.chdir(os.path.dirname(sys.argv[0]))
 
-    #try:
-    # extension = False
-    # if code[len(code)] == "c": extension = True
-    # if extension == False: raiseError("Error: File extension not valid.")
-    print("Code: " + code)
-    file = open(code, "r")
-    code = file.read()
-    file.close()
-    #except:
-    #    # print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
-    #    raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
+    # Define command line arguments.
+
+    try:
+        if sys.argv[1] == "false" or sys.argv[1] == "False": 
+            mode = False
+        else: 
+            mode = True
+    except:
+        raiseError("Error: Oops! Looks like you didn't supply a mode for us. Could you re-enter the command? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
+
+    try:
+        code = str(sys.argv[2])
+    except:
+        raiseError("Error: Oops! Looks like you didn't supply a path to your code for us. Could you re-enter the command? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
+
+    try:
+        catec = int(sys.argv[3])
+    except:
+        print("\033[93m    {}\033[00m".format("Warning: Catec is undefined. Default to 0."))
+
+    try:
+        print("Code: " + code)
+        extension = False
+        if code[len(code)] == "c": extension = True
+        if extension == False: raiseError("Error: File extension not valid.")
+        
+        file = open(code, "r")
+        code = file.read()
+        file.close()
+    except:
+        # print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
+        raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
+
     if mode == False:
         if catec == 0:
             print(number(code))
@@ -56,23 +74,6 @@ def clamp(n, minn, maxn):
     else:
         return n
 
-try:
-    if sys.argv[1] == "false" or sys.argv[1] == "False": 
-        mode = False
-    else: 
-        mode = True
-except:
-    raiseError("Error: Oops! Looks like you didn't supply a mode for us. Could you re-enter the command? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
-
-try:
-    code = str(sys.argv[2])
-except:
-    raiseError("Error: Oops! Looks like you didn't supply a path to your code for us. Could you re-enter the command? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
-
-try:
-    catec = int(sys.argv[3])
-except:
-    print("\033[93m    {}\033[00m".format("Warning: Catec is undefined. Default to 0."))
 
 
 def number(input, prnt):
