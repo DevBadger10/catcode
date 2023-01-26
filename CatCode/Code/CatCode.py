@@ -3,21 +3,46 @@ import sys
 
 import turtle as turt
 
+# Define command line arguments.
+
+
+
 def main():
     os.chdir(os.path.dirname(sys.argv[0]))
 
-    try:
-        file = open(code, "r")
-        code = file.read()
-        file.close()
-    except:
-        print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
-        # raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
+    #try:
+    # extension = False
+    # if code[len(code)] == "c": extension = True
+    # if extension == False: raiseError("Error: File extension not valid.")
+    print("Code: " + code)
+    file = open(code, "r")
+    code = file.read()
+    file.close()
+    #except:
+    #    # print("\033[93m    {}\033[00m".format("Warning: Read code failed, but bypass was active."))
+    #    raiseError("Error: We either couldn't find or didn't have access to your code. Could you make sure you wrote the path correctly? If that doesn't help, look on the CatCode Wiki! (https://github.com/DevBadger10/catcode/wiki)")
     if mode == False:
-        turtle("meh") # Seems  to be accessing an out of range thing in it.AGAIN.
-        pass
+        if catec == 0:
+            print(number(code))
+        elif catec == 1:
+            pass
+        elif catec == 2:
+            pass
+        elif catec == 3:
+            pass
+        else:
+            raiseError("Error: Catec is undefined.")
     if mode == True:
-        print()
+        if catec == 0:
+            pass
+        elif catec == 1:
+            pass
+        elif catec == 2:
+            pass
+        elif catec == 3:
+            raiseError("Error: Cannot compile Catec 3. Reason: Catec 3 is an abstract Catec.")
+        else:
+            raiseError("Error: Catec is undefined.")
     
 def raiseError(error):
     print("\033[91m    {}\033[00m".format(error))
@@ -30,8 +55,6 @@ def clamp(n, minn, maxn):
         return maxn
     else:
         return n
-
-# Define command line arguments.
 
 try:
     if sys.argv[1] == "false" or sys.argv[1] == "False": 
@@ -51,16 +74,11 @@ try:
 except:
     print("\033[93m    {}\033[00m".format("Warning: Catec is undefined. Default to 0."))
 
+
 def number(input, prnt):
     output = 0
+    length = len(input)
 
-    length = len(input) # Wait, so let me get this straight; passing range() len(input) leads to only one iteration, but feeding it a variable equivelant to len(input) works? *internal development screaming*
-    # print(str(length))
-
-    # print(str(range(len(input))))
-    # for n in range(len(input)):
-    #     print(n)
-    # print("123457890"[5])
     for i in range(0, length):
         if prnt: print(str(output))
         if input[i] == "1":
@@ -152,285 +170,288 @@ def number(input, prnt):
 def turtle(input):
     output = turt.Turtle()
     output.penup()
-    lenput = len(input) # Why does it have to work like this...
+    lenput = len(input)
     output.hideturtle()
     output.pensize(15)
     output.speed(3)
     turt.colormode(255)
     output.pendown()
 
-    while True:
-        for i in range(lenput):
-            if input[i] == "1":
-                try:
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                except:
+    try:
+        while True:
+            for i in range(lenput):
+                if input[i] == "1":
                     try:
-                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
-                        i += 2
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                        i += 3
                     except:
                         try:
-                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
-                            i += 1
+                            output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                            i += 2
                         except:
                             try:
-                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                                i += 1
                             except:
-                                raiseError("Cheese.")
-            elif input[i]  ==  "2":
-                output.up()
-            elif input[i]  ==  "3":
-                output.down()
-            elif input[i]  ==  "4":
-                try:
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                except: 
+                                try:
+                                    output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                except:
+                                    raiseError("Cheese.")
+                elif input[i]  ==  "2":
+                    output.up()
+                elif input[i]  ==  "3":
+                    output.down()
+                elif input[i]  ==  "4":
                     try:
-                        output.pencolor(colour(input[i], False, True))
-                    except:
-                        output.pencolor(colour("g", False, True))
-            elif input[i]  ==  "5":
-                try:
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                except:
+                        output.pencolor(colour(input[i] + input[i + 1], False, True))
+                        i += 1
+                    except: 
+                        try:
+                            output.pencolor(colour(input[i], False, True))
+                        except:
+                            output.pencolor(colour("g", False, True))
+                elif input[i]  ==  "5":
                     try:
-                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
-                        i += 2
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                        i += 3
                     except:
                         try:
-                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
-                            i += 1
+                            output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                            i += 2
                         except:
                             try:
-                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                                i += 1
                             except:
-                                raiseError("Cheese.")
-            elif input[i]  ==  "6":
-                output.down()
-            elif input[i]  ==  "7":
-                output.down()
-            elif input[i]  ==  "8":
-                try:
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                except: 
+                                try:
+                                    output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                except:
+                                    raiseError("Cheese.")
+                elif input[i]  ==  "6":
+                    output.down()
+                elif input[i]  ==  "7":
+                    output.down()
+                elif input[i]  ==  "8":
                     try:
-                        output.pencolor(colour(input[i], False, True))
-                    except:
-                        output.pencolor(colour("g", False, True))
-            elif input[i]  ==  "9":
-                try:
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                except:
+                        output.pencolor(colour(input[i] + input[i + 1], False, True))
+                        i += 1
+                    except: 
+                        try:
+                            output.pencolor(colour(input[i], False, True))
+                        except:
+                            output.pencolor(colour("g", False, True))
+                elif input[i]  ==  "9":
                     try:
-                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
-                        i += 2
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                        i += 3
                     except:
                         try:
-                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
-                            i += 1
+                            output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                            i += 2
                         except:
                             try:
-                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                                i += 1
                             except:
-                                raiseError("    Cheese.")
-            elif input[i]  ==  "0":
-                output.down()
-            elif input[i]  ==  "q":
-                output.down()
-            elif input[i]  ==  "w":
-                try:
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                except: 
+                                try:
+                                    output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                except:
+                                    raiseError("    Cheese.")
+                elif input[i]  ==  "0":
+                    output.down()
+                elif input[i]  ==  "q":
+                    output.down()
+                elif input[i]  ==  "w":
                     try:
-                        output.pencolor(colour(input[i], False, True))
-                    except:
-                        output.pencolor(colour("g", False, True))
-            elif input[i]  ==  "e":
-                try:
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                except:
+                        output.pencolor(colour(input[i] + input[i + 1], False, True))
+                        i += 1
+                    except: 
+                        try:
+                            output.pencolor(colour(input[i], False, True))
+                        except:
+                            output.pencolor(colour("g", False, True))
+                elif input[i]  ==  "e":
                     try:
-                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
-                        i += 2
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                        i += 3
                     except:
                         try:
-                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
-                            i += 1
+                            output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                            i += 2
                         except:
                             try:
-                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                                i += 1
                             except:
-                                raiseError("    Cheese.")
-            elif input[i]  ==  "r":
-                output.down()
-            elif input[i]  ==  "t":
-                output.down()
-            elif input[i]  ==  "y":
-                try:
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                except: 
+                                try:
+                                    output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                except:
+                                    raiseError("    Cheese.")
+                elif input[i]  ==  "r":
+                    output.down()
+                elif input[i]  ==  "t":
+                    output.down()
+                elif input[i]  ==  "y":
                     try:
-                        output.pencolor(colour(input[i], False, True))
-                    except:
-                        output.pencolor(colour("g", False, True))
-            elif input[i]  ==  "u":
-                try:
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                except:
+                        output.pencolor(colour(input[i] + input[i + 1], False, True))
+                        i += 1
+                    except: 
+                        try:
+                            output.pencolor(colour(input[i], False, True))
+                        except:
+                            output.pencolor(colour("g", False, True))
+                elif input[i]  ==  "u":
                     try:
-                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
-                        i += 2
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                        i += 3
                     except:
                         try:
-                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
-                            i += 1
+                            output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                            i += 2
                         except:
                             try:
-                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                                i += 1
                             except:
-                                raiseError("Cheese.")
-            elif input[i]  ==  "i":
-                output.down()
-            elif input[i]  ==  "o":
-                output.down()
-            elif input[i]  ==  "p":
-                try:
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                except: 
+                                try:
+                                    output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                except:
+                                    raiseError("Cheese.")
+                elif input[i]  ==  "i":
+                    output.down()
+                elif input[i]  ==  "o":
+                    output.down()
+                elif input[i]  ==  "p":
                     try:
-                        output.pencolor(colour(input[i], False, True))
-                    except:
-                        output.pencolor(colour("g", False, True))
-            elif input[i]  ==  "a":
-                try:
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                except:
+                        output.pencolor(colour(input[i] + input[i + 1], False, True))
+                        i += 1
+                    except: 
+                        try:
+                            output.pencolor(colour(input[i], False, True))
+                        except:
+                            output.pencolor(colour("g", False, True))
+                elif input[i]  ==  "a":
                     try:
-                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
-                        i += 2
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                        i += 3
                     except:
                         try:
-                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
-                            i += 1
+                            output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                            i += 2
                         except:
                             try:
-                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                                i += 1
                             except:
-                                raiseError("    Cheese.")
-            elif input[i]  ==  "s":
-                output.down()
-            elif input[i]  ==  "d":
-                output.down()
-            elif input[i]  ==  "f":
-                try:
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                except: 
+                                try:
+                                    output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                except:
+                                    raiseError("    Cheese.")
+                elif input[i]  ==  "s":
+                    output.down()
+                elif input[i]  ==  "d":
+                    output.down()
+                elif input[i]  ==  "f":
                     try:
-                        output.pencolor(colour(input[i], False, True))
-                    except:
-                        output.pencolor(colour("g", False, True))
-            elif input[i]  ==  "g":
-                try:
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                except:
+                        output.pencolor(colour(input[i] + input[i + 1], False, True))
+                        i += 1
+                    except: 
+                        try:
+                            output.pencolor(colour(input[i], False, True))
+                        except:
+                            output.pencolor(colour("g", False, True))
+                elif input[i]  ==  "g":
                     try:
-                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
-                        i += 2
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                        i += 3
                     except:
                         try:
-                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
-                            i += 1
+                            output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                            i += 2
                         except:
                             try:
-                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                                i += 1
                             except:
-                                raiseError("Cheese.")
-            elif input[i]  ==  "h":
-                output.down()
-            elif input[i]  ==  "j":
-                output.down()
-            elif input[i]  ==  "k":
-                try:
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                except: 
+                                try:
+                                    output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                except:
+                                    raiseError("Cheese.")
+                elif input[i]  ==  "h":
+                    output.down()
+                elif input[i]  ==  "j":
+                    output.down()
+                elif input[i]  ==  "k":
                     try:
-                        output.pencolor(colour(input[i], False, True))
-                    except:
-                        output.pencolor(colour("g", False, True))
-            elif input[i]  ==  "l":
-                try:
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                except:
+                        output.pencolor(colour(input[i] + input[i + 1], False, True))
+                        i += 1
+                    except: 
+                        try:
+                            output.pencolor(colour(input[i], False, True))
+                        except:
+                            output.pencolor(colour("g", False, True))
+                elif input[i]  ==  "l":
                     try:
-                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
-                        i += 2
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                        i += 3
                     except:
                         try:
-                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
-                            i += 1
+                            output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                            i += 2
                         except:
                             try:
-                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                                i += 1
                             except:
-                                raiseError("Cheese.")
-            elif input[i]  ==  "z":
-                output.down()
-            elif input[i]  ==  "x":
-                output.down()
-            elif input[i]  ==  "c":
-                try:
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                except: 
+                                try:
+                                    output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                except:
+                                    raiseError("Cheese.")
+                elif input[i]  ==  "z":
+                    output.down()
+                elif input[i]  ==  "x":
+                    output.down()
+                elif input[i]  ==  "c":
                     try:
-                        output.pencolor(colour(input[i], False, True))
-                    except:
-                        output.pencolor(colour("g", False, True))
-            elif input[i]  ==  "v":
-                try:
-                    output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
-                    i += 3
-                except:
+                        output.pencolor(colour(input[i] + input[i + 1], False, True))
+                        i += 1
+                    except: 
+                        try:
+                            output.pencolor(colour(input[i], False, True))
+                        except:
+                            output.pencolor(colour("g", False, True))
+                elif input[i]  ==  "v":
                     try:
-                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
-                        i += 2
+                        output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2] + input[i +3], False), -250, 250)))
+                        i += 3
                     except:
                         try:
-                            output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
-                            i += 1
+                            output.goto(int(clamp(number(input[i] + input[i + 1], False), -250, 250)), int(clamp(number(input[i + 2], False), -250, 250)))
+                            i += 2
                         except:
                             try:
-                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i + 1], False), -250, 250)))
+                                i += 1
                             except:
-                                raiseError("    Cheese.")
-            elif input[i]  ==  "b":
-                output.down()
-            elif input[i]  ==  "n":
-                output.up()
-            elif input[i]  ==  "m":
-                try:
-                    output.pencolor(colour(input[i] + input[i + 1], False, True))
-                    i += 1
-                except: 
+                                try:
+                                    output.goto(int(clamp(number(input[i], False), -250, 250)), int(clamp(number(input[i], False), -250, 250)))
+                                except:
+                                    raiseError("    Cheese.")
+                elif input[i]  ==  "b":
+                    output.down()
+                elif input[i]  ==  "n":
+                    output.up()
+                elif input[i]  ==  "m":
                     try:
-                        output.pencolor(colour(input[i], False, True))
-                    except:
-                        output.pencolor(colour("g", False, True))
+                        output.pencolor(colour(input[i] + input[i + 1], False, True))
+                        i += 1
+                    except: 
+                        try:
+                            output.pencolor(colour(input[i], False, True))
+                        except:
+                            output.pencolor(colour("g", False, True))
+    except:
+        raiseError("Shredded Cheese.")
 
 def game(input):
     gtype = False
