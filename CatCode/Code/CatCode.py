@@ -28,6 +28,8 @@ def clamp(n, minn, maxn):
         return minn
     elif n > maxn:
         return maxn
+    else:
+        return n
 
 # Define command line arguments.
 
