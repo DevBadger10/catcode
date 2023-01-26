@@ -1,3 +1,4 @@
+
 def main():
     if catec == 0:
         print(number(code, True))
