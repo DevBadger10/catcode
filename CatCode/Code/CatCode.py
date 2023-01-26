@@ -1,5 +1,6 @@
 import os
 import sys
+import subprocess
 
 import turtle as turt
 
@@ -1116,6 +1117,10 @@ main()
         export = open("./TMP", "w")
         export.writelines(toexport)
         export.close()
+
+        subprocess.run("pyinstaller TMP")
+
+
     
 def raiseError(error):
     print("\033[91m    {}\033[00m".format(error))
