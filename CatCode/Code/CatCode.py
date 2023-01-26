@@ -49,15 +49,15 @@ def main():
             raiseError("Error: Catec is undefined.")
     if mode == True:
         if catec == 0:
-            pass
-        elif catec == 1:
-            pass
-        elif catec == 2:
-            pass
-        elif catec == 3:
-            raiseError("Error: Cannot compile Catec 3. Reason: Catec 3 is an abstract Catec.")
-        else:
-            raiseError("Error: Catec is undefined.")
+            export = open("./TMP", "w")
+            toexport = 
+            export.writelines("""
+import os
+import sys
+import turtle as turt
+
+""" 
+""" + "catec = " + str(catec) """ """)
     
 def raiseError(error):
     print("\033[91m    {}\033[00m".format(error))
