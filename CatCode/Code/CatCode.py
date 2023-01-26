@@ -13,8 +13,7 @@ def main():
 def main():
     if catec == 0:
         print(number(code, True))
-        while True:
-            pass
+        while True: pass
     elif catec == 1:
         turtle(code)
     elif catec == 2:
@@ -1115,7 +1114,7 @@ main()
         else:
             raiseError("Error: Catec is undefined.")
     if mode == True:
-        toexport = "import os\n\rimport sys\n\rimport turtle as turt\n\rcode = \"" + code + "\"\n\rcatec = " + str(catec) + "\n\r" + cmplbase + "# END"
+        toexport = "import os\n\rimport sys\n\rimport turtle as turt\n\rimport pygame\n\rcode = \"" + code + "\"\n\rcatec = " + str(catec) + "\n\r" + cmplbase + "# END"
         export = open("./TMP", "w")
         export.writelines(toexport)
         export.close()
@@ -1134,8 +1133,6 @@ main()
                 '--windowed',
                 '-n CatCode Executable'
             ])
-
-
     
 def raiseError(error):
     print("\033[91m    {}\033[00m".format(error))

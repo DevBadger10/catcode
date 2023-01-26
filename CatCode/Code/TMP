@@ -1,15 +1,15 @@
 import os
 import sys
 import turtle as turt
-code = "drsdfewsfdgrg"
-catec = 0
+import pygame
+code = "frsdfewsfdgrg"
+catec = 2
 
 
 def main():
     if catec == 0:
         print(number(code, True))
-        while True:
-            pass
+        while True: pass
     elif catec == 1:
         turtle(code)
     elif catec == 2:
