@@ -27,10 +27,7 @@ def main():
         print("\033[93m    {}\033[00m".format("Warning: Catec is undefined. Default to 0."))
 
     try:
-        print("Code: " + code)
-        extension = False
-        if code[len(code)] == "c": extension = True
-        if extension == False: raiseError("Error: File extension not valid.")
+        if not code.endswith(".cc"): raiseError("Error: Oops! Seems you put the wrong extension in there. Could you try changing it to .cc?")
         
         file = open(code, "r")
         code = file.read()
@@ -41,13 +38,13 @@ def main():
 
     if mode == False:
         if catec == 0:
-            print(number(code))
+            print(number(code, True))
         elif catec == 1:
-            pass
+            turtle(code)
         elif catec == 2:
-            pass
+            game(code)
         elif catec == 3:
-            pass
+            print(colour(code, True))
         else:
             raiseError("Error: Catec is undefined.")
     if mode == True:
@@ -73,8 +70,6 @@ def clamp(n, minn, maxn):
         return maxn
     else:
         return n
-
-
 
 def number(input, prnt):
     output = 0
