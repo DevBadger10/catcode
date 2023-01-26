@@ -13,6 +13,8 @@ def main():
 def main():
     if catec == 0:
         print(number(code, True))
+        while True:
+            pass
     elif catec == 1:
         turtle(code)
     elif catec == 2:
@@ -1117,12 +1119,21 @@ main()
         export = open("./TMP", "w")
         export.writelines(toexport)
         export.close()
-
-        PyInstaller.__main__.run([
-            'TMP',
-            '--onefile',
-            '--windowed'
-        ])
+        if catec == 0:
+            PyInstaller.__main__.run([
+                'TMP',
+                '--onefile',
+                '--windowed',
+                '-n CatCode Executable',
+                '-c'
+            ])
+        else: 
+            PyInstaller.__main__.run([
+                'TMP',
+                '--onefile',
+                '--windowed',
+                '-n CatCode Executable'
+            ])
 
 
     

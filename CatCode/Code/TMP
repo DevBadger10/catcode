@@ -8,6 +8,8 @@ import os
 def main():
     if catec == 0:
         print(number(code, True))
+        while True:
+            pass
     elif catec == 1:
         turtle(code)
     elif catec == 2:
