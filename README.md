@@ -1,2 +1,2 @@
 # CatCode
-A "coding language" for cats.
+An esolang that allows cats to code. Check the wiki for more info.  
